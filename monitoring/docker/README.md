@@ -240,3 +240,11 @@ To clean up all running containers and networks associated with the project, run
 ```bash
 docker down
 ```
+
+## Support My Work
+
+Creating free, high-quality videos and resources for everyone is challenging. Your support enables me to invest more in content creation, enhancing overall quality. Becoming a member offers significant support and comes with cool perks as a token of appreciation.
+
+Remember, ***support is optional***. Whether you choose to become a member or not, you'll have full access to all my videos and resources.
+
+Support here: [https://www.patreon.com/thiagodsantos](https://www.patreon.com/thiagodsantos) or [https://www.buymeacoffee.com/thiagodsantos](https://www.buymeacoffee.com/thiagodsantos)
