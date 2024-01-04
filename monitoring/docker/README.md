@@ -54,6 +54,12 @@ Feel free to customize and expand upon this description as needed for your GitHu
 
 ![Screenshot](/monitoring/docker/screenshot/docker-design.png)
 
+## Requirements
+
+Before you begin, make sure you have the following prerequisites:
+
+- **Docker Desktop**: You must have Docker Desktop installed and running on your system. You can download and install Docker Desktop from [https://www.docker.com/products/docker-desktop](https://www.docker.com/products/docker-desktop).
+
 To kickstart your monitoring journey, follow these steps:
 
 ### Linux or MacOS 🏠 Edit Your Hosts File
