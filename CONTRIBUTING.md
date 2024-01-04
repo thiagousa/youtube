@@ -1,7 +1,3 @@
-Certainly! Here's a Contribution Guidelines template for your GitHub project:
-
----
-
 # Contribution Guidelines
 
 Welcome to the Monitoring Stack project! We appreciate your interest in contributing to this open-source project. By contributing, you can help us improve and enhance the monitoring stack for the benefit of the entire community. Please take a moment to review the guidelines below to ensure a smooth and effective contribution process.

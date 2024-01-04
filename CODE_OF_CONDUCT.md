@@ -1,7 +1,3 @@
-Certainly! Here's a Code of Conduct for your GitHub project:
-
----
-
 # Code of Conduct
 
 ## Introduction
