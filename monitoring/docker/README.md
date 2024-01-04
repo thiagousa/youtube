@@ -1,6 +1,6 @@
 # GitHub Monitoring Project 😎
 
-![Screenshot](/youtube/monitoring/docker/screenshot/docker-design.png)
+![Screenshot](/monitoring/docker/screenshot/docker-design.png)
 
 ## 🚀 Getting Started
 
@@ -59,7 +59,7 @@ docker compose up -d
 
 Visit [All Services](http://services.acme.net) to access the various components of the monitoring stack.
 
-![Screenshot](/youtube/monitoring/docker/screenshot/services.png)
+![Screenshot](/monitoring/docker/screenshot/services.png)
 
 ### ❌ Stopping Node Exporter
 
@@ -82,7 +82,7 @@ docker down
 ### Prometheus 📈
 
 [Prometheus](http://prometheus.acme.net) is your trusty metrics collection and storage tool. It stores data with timestamps and optional labels, allowing you to monitor and analyze your systems effectively.
-![Screenshot](/youtube/monitoring/docker/screenshot/prometheus.png)
+![Screenshot](/monitoring/docker/screenshot/prometheus.png)
 
 
 #### Configuration Files
@@ -94,13 +94,13 @@ docker down
 
 [AlertManager](http://alertmanager.acme.net/#/alerts) handles alerts sent by client applications, deduplicates, groups, routes, and delivers them to the right receiver. It also takes care of silencing and inhibition of alerts.
 
-![Screenshot](/youtube/monitoring/docker/screenshot/alertmanager.png)
+![Screenshot](/monitoring/docker/screenshot/alertmanager.png)
 
 ### Grafana 📊
 
 [Grafana](http://grafana.acme.net/) is your open-source analytics and monitoring solution. Use it to visualize your data from various sources.
 
-![Screenshot](/youtube/monitoring/docker/screenshot/grafana.png)
+![Screenshot](/monitoring/docker/screenshot/grafana.png)
 
 
 
@@ -125,19 +125,19 @@ Login with the following credentials:
 
 [Node Exporter](http://nodeexport.acme.net/) is a Prometheus exporter for hardware and OS metrics exposed by *NIX kernels.
 
-![Screenshot](/youtube/monitoring/docker/screenshot/nodeexport.png)
+![Screenshot](monitoring/docker/screenshot/nodeexport.png)
 
 ### MailHog 📧
 
 [MailHog](http://mailhog.acme.net/) is an email testing tool for developers, perfect for configuring SMTP delivery for your applications.
 
-![Screenshot](/youtube/monitoring/docker/screenshot/mailhog.png)
+![Screenshot](monitoring/docker/screenshot/mailhog.png)
 
 ### Nginx-Proxy-Manager 🌐
 
 [Nginx-Proxy-Manager](http://nginx.acme.net/) simplifies proxying to websites and provides free SSL, all without the hassle of Nginx or Letsencrypt configuration.
 
-![Screenshot](/youtube/monitoring/docker/screenshot/nginx.png)
+![Screenshot](monitoring/docker/screenshot/nginx.png)
 
 
 Login with the following credentials:
@@ -149,4 +149,4 @@ Login with the following credentials:
 
 [Prometheus Query](http://prometheus.acme.net/) is where you can experiment with various queries and explore your data.
 
-![Screenshot](/youtube/monitoring/docker/screenshot/prometheus.png)
+![Screenshot](monitoring/docker/screenshot/prometheus.png)
