@@ -102,6 +102,38 @@ Add the following entries to your `/etc/hosts` file:
 
 6. **Close Notepad**: 🚪 You've worked your magic! You can now elegantly close Notepad.
 
+Certainly! Here's an updated `readme.md` section that explains how to clone the Git project:
+
+## Requirements
+
+Before you begin, make sure you have the following prerequisites:
+
+- **Docker Desktop**: You must have Docker Desktop installed and running on your system. You can download and install Docker Desktop from [https://www.docker.com/products/docker-desktop](https://www.docker.com/products/docker-desktop).
+
+- **Operating System**: This project is designed to run on Linux-based systems. Ensure that you are using a compatible operating system.
+
+## Cloning the Project
+
+To get started with the Monitoring Stack project, follow these steps to clone the Git repository to your local machine:
+
+1. **Open a Terminal or Command Prompt**: Launch your terminal application on your computer.
+
+2. **Clone the Repository**: Run the following command to clone the Git repository:
+
+   ```shell
+   git clone https://github.com/thiagousa/youtube.git
+   ```
+
+   This command will create a new directory named `youtube` in your current location and clone the project into it.
+
+3. **Change Directory**: Enter the project directory by running:
+
+   ```shell
+   cd youtube/monitoring/docker
+   ```
+
+Now you have successfully cloned the Monitoring Stack project to your local machine, and you can proceed with setting up and running the monitoring stack as described in the rest of this readme.
+
 ### 🐳 Run Docker Compose
 
 Navigate to the project directory and run the following command to start the services:
@@ -117,21 +149,6 @@ Visit [All Services](http://services.acme.net) to access the various components 
 
 ![Screenshot](/monitoring/docker/screenshot/services.png)
 
-### ❌ Stopping Node Exporter
-
-If you need to stop the Node Exporter, use this command:
-
-```bash
-docker rm --force foobar-exporter
-```
-
-### 🧹 Deleting All Applications
-
-To clean up all running containers and networks associated with the project, run:
-
-```bash
-docker down
-```
 
 ## 📚 Services Description
 
@@ -206,3 +223,20 @@ Login with the following credentials:
 [Prometheus Query](http://prometheus.acme.net/) is where you can experiment with various queries and explore your data.
 
 ![Screenshot](/monitoring/docker/screenshot/prometheus.png)
+
+
+### ❌ Stopping Node Exporter to Received the Alert on Mailhog
+
+If you need to stop the Node Exporter, use this command:
+
+```bash
+docker rm --force foobar-exporter
+```
+
+### 🧹 Deleting All Applications
+
+To clean up all running containers and networks associated with the project, run:
+
+```bash
+docker down
+```
