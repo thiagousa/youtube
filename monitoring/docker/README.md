@@ -38,7 +38,7 @@ Follow the detailed setup instructions in the [project's documentation](https://
 
 ## How to Contribute 🤝
 
-Contributions to this project are welcome! Whether you want to fix a bug, improve documentation, or add new features, please check out our [Contribution Guidelines](/youtube/CONTRIBUTING.md) to get started.
+Contributions to this project are welcome! Whether you want to fix a bug, improve documentation, or add new features, please check out our [Contribution Guidelines](CONTRIBUTING.md) to get started.
 
 ## License 📜
 
