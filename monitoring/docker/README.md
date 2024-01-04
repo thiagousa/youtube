@@ -1,8 +1,58 @@
-# GitHub Monitoring Project 😎
+# Monitoring Stack with Prometheus, AlertManager, Grafana, Node Exporter, MailHog, and NGINX 🚀
+
+![Project Preview](https://github.com/thiagousa/youtube/blob/main/monitoring/docker/screenshot/docker-design.png)
+
+Welcome to the Monitoring Stack project, a robust and comprehensive solution for monitoring and managing your infrastructure. This project combines powerful open-source tools to help you keep a watchful eye on your systems, applications, and services.
+
+## What's Inside? 🧐
+
+This project provides an out-of-the-box setup for a monitoring stack that includes:
+
+- **Prometheus**: A leading open-source monitoring and alerting toolkit, designed for reliability and scalability.
+
+- **AlertManager**: Handles alerts sent by various applications, deduplicates, groups, routes, and delivers them to the right recipients.
+
+- **Grafana**: An open-source platform for monitoring and observability, complete with customizable dashboards and powerful visualization options.
+
+- **Node Exporter**: A Prometheus exporter that collects hardware and OS metrics, making it essential for system monitoring.
+
+- **MailHog**: An email testing tool for developers, allowing you to configure SMTP delivery and view messages conveniently.
+
+- **NGINX Proxy Manager**: Simplify reverse proxying to websites with free SSL, without the complexity of Nginx or Letsencrypt configuration.
+
+## Getting Started 🚀
+
+Follow the detailed setup instructions in the [project's documentation](https://github.com/thiagousa/youtube/tree/main/monitoring/docker) to get your monitoring stack up and running in no time. With just a few simple steps, you'll have access to a fully functional monitoring environment.
+
+## Features and Benefits 🌟
+
+- **Easy Configuration**: The project includes well-defined configuration files for each component, making customization straightforward.
+
+- **Powerful Visualization**: Grafana empowers you to create stunning dashboards and visualize data in real-time, helping you gain insights into your infrastructure.
+
+- **Alerting and Notifications**: AlertManager ensures that you're promptly notified of any issues, allowing you to take proactive measures.
+
+- **Scalable and Reliable**: Prometheus, at its core, is designed for reliability and scalability, making it suitable for both small and large-scale environments.
+
+- **Local Development**: The project is perfect for local development, enabling you to test and optimize your monitoring setup.
+
+## How to Contribute 🤝
+
+Contributions to this project are welcome! Whether you want to fix a bug, improve documentation, or add new features, please check out our [Contribution Guidelines](CONTRIBUTING.md) to get started.
+
+## License 📜
+
+This project is licensed under the [MIT License](LICENSE), so you're free to use it in your own projects.
+
+## Get Started Today! 🚀
+
+Ready to take control of your infrastructure's monitoring? Get started with this Monitoring Stack project and keep your systems running smoothly!
+
+[![Watch the Video](https://img.youtube.com/vi/YourVideoID/0.jpg)](https://www.youtube.com/watch?v=YourVideoID)
+
+Feel free to customize and expand upon this description as needed for your GitHub project.
 
 ![Screenshot](/monitoring/docker/screenshot/docker-design.png)
-
-## 🚀 Getting Started
 
 To kickstart your monitoring journey, follow these steps:
 
