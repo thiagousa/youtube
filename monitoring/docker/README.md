@@ -2,7 +2,7 @@
 
 ![Project Preview](https://github.com/thiagousa/youtube/blob/main/monitoring/docker/screenshot/docker-design.png)
 
-Welcome to the Monitoring Stack project, a robust and comprehensive solution for monitoring and managing your infrastructure. This project combines powerful open-source tools to help you keep a watchful eye on your systems, applications, and services.
+Welcome to the Monitoring Stack project, a robust and comprehensive solution for monitoring and managing your infrastructure. This project combines powerful open-source tools to help you keep learning the monitoring infrastruture. 
 
 ## What's Inside? 🧐
 
