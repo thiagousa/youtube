@@ -125,19 +125,19 @@ Login with the following credentials:
 
 [Node Exporter](http://nodeexport.acme.net/) is a Prometheus exporter for hardware and OS metrics exposed by *NIX kernels.
 
-![Screenshot](monitoring/docker/screenshot/nodeexport.png)
+![Screenshot](/monitoring/docker/screenshot/nodeexport.png)
 
 ### MailHog 📧
 
 [MailHog](http://mailhog.acme.net/) is an email testing tool for developers, perfect for configuring SMTP delivery for your applications.
 
-![Screenshot](monitoring/docker/screenshot/mailhog.png)
+![Screenshot](/monitoring/docker/screenshot/mailhog.png)
 
 ### Nginx-Proxy-Manager 🌐
 
 [Nginx-Proxy-Manager](http://nginx.acme.net/) simplifies proxying to websites and provides free SSL, all without the hassle of Nginx or Letsencrypt configuration.
 
-![Screenshot](monitoring/docker/screenshot/nginx.png)
+![Screenshot](/monitoring/docker/screenshot/nginx.png)
 
 
 Login with the following credentials:
@@ -149,4 +149,4 @@ Login with the following credentials:
 
 [Prometheus Query](http://prometheus.acme.net/) is where you can experiment with various queries and explore your data.
 
-![Screenshot](monitoring/docker/screenshot/prometheus.png)
+![Screenshot](/monitoring/docker/screenshot/prometheus.png)
