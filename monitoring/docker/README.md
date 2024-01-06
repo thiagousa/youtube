@@ -56,11 +56,13 @@ Feel free to customize and expand upon this description as needed for your GitHu
 
 ## Requirements
 
-Before you begin, make sure you have the following prerequisites:
+To set up your environment for using Docker, ensure you have the following prerequisites:
 
-- **Docker Desktop**: You must have Docker Desktop installed and running on your system. You can download and install Docker Desktop from [https://www.docker.com/products/docker-desktop](https://www.docker.com/products/docker-desktop).
+Docker Desktop: This is a necessary tool for running containerized applications. Make sure Docker Desktop is installed and operational on your system. You can download and install Docker Desktop from the official website at Docker Desktop.
 
-To kickstart your monitoring journey, follow these steps:
+Git: Git is a version control system often used for code management. It is essential for cloning repositories, managing source code versions, and collaborating with other developers. You can download Git from Git's official website.
+
+Once you have these tools installed, you can proceed with setting up your Docker environment.
 
 ### Linux or MacOS 🏠 Edit Your Hosts File
 
