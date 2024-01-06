@@ -58,9 +58,9 @@ Feel free to customize and expand upon this description as needed for your GitHu
 
 To set up your environment for using Docker, ensure you have the following prerequisites:
 
-Docker Desktop: This is a necessary tool for running containerized applications. Make sure Docker Desktop is installed and operational on your system. You can download and install Docker Desktop from the official website at Docker Desktop.
+1. **Docker Desktop**: This is a necessary tool for running containerized applications. Make sure Docker Desktop is installed and operational on your system. You can download and install Docker Desktop from the official website at [Docker Desktop](https://www.docker.com/products/docker-desktop).
 
-Git: Git is a version control system often used for code management. It is essential for cloning repositories, managing source code versions, and collaborating with other developers. You can download Git from Git's official website.
+2. **Git**: Git is a version control system often used for code management. It is essential for cloning repositories, managing source code versions, and collaborating with other developers. You can download Git from [Git's official website](https://git-scm.com/downloads).
 
 Once you have these tools installed, you can proceed with setting up your Docker environment.
 
