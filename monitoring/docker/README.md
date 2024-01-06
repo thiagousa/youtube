@@ -56,13 +56,15 @@ Feel free to customize and expand upon this description as needed for your GitHu
 
 ## Requirements
 
-To set up your environment for using Docker, ensure you have the following prerequisites:
+To set up your environment effectively for Docker usage, along with Git, it's also important to have a code editor. Here's an updated list of prerequisites:
 
-1. **Docker Desktop**: This is a necessary tool for running containerized applications. Make sure Docker Desktop is installed and operational on your system. You can download and install Docker Desktop from the official website at [Docker Desktop](https://www.docker.com/products/docker-desktop).
+1. **Docker Desktop**: This application is essential for running containerized applications. Ensure that Docker Desktop is installed and running on your system. You can download it from [Docker's official website](https://www.docker.com/products/docker-desktop).
 
-2. **Git**: Git is a version control system often used for code management. It is essential for cloning repositories, managing source code versions, and collaborating with other developers. You can download Git from [Git's official website](https://git-scm.com/downloads).
+2. **Git**: A version control system that is crucial for code management, especially when collaborating in a team. It helps in tracking changes in source code during software development. Download Git from [Git's official website](https://git-scm.com/downloads).
 
-Once you have these tools installed, you can proceed with setting up your Docker environment.
+3. **Code Editor (such as Visual Studio Code)**: A code editor is necessary for writing and editing your code. Visual Studio Code (VS Code) is a popular choice due to its extensive range of features, including support for Docker and Git. You can download VS Code from [Visual Studio Code's official website](https://code.visualstudio.com/). However, you can choose any other code editor that you are comfortable with.
+
+With these tools installed, you'll have a robust setup for managing Docker containers, maintaining your codebase, and editing your code effectively.
 
 ### Linux or MacOS 🏠 Edit Your Hosts File
 
