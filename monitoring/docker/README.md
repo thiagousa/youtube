@@ -133,7 +133,7 @@ To get started with the Monitoring Stack project, follow these steps to clone th
 3. **Change Directory**: Enter the project directory by running:
 
    ```shell
-   cd youtube/monitoring/docker
+   cd monitoring/docker
    ```
 
 Now you have successfully cloned the Monitoring Stack project to your local machine, and you can proceed with setting up and running the monitoring stack as described in the rest of this readme.
@@ -143,7 +143,7 @@ Now you have successfully cloned the Monitoring Stack project to your local mach
 Navigate to the project directory and run the following command to start the services:
 
 ```bash
-cd docker
+
 docker compose up -d
 ```
 
@@ -242,7 +242,7 @@ docker rm --force foobar-exporter
 To clean up all running containers and networks associated with the project, run:
 
 ```bash
-docker down
+docker compose down
 ```
 
 ## Support My Work
