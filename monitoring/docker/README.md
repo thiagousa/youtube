@@ -106,16 +106,6 @@ Add the following entries to your `/etc/hosts` file:
 
 6. **Close Notepad**: 🚪 You've worked your magic! You can now elegantly close Notepad.
 
-Certainly! Here's an updated `readme.md` section that explains how to clone the Git project:
-
-## Requirements
-
-Before you begin, make sure you have the following prerequisites:
-
-- **Docker Desktop**: You must have Docker Desktop installed and running on your system. You can download and install Docker Desktop from [https://www.docker.com/products/docker-desktop](https://www.docker.com/products/docker-desktop).
-
-- **Operating System**: This project is designed to run on Linux-based systems. Ensure that you are using a compatible operating system.
-
 ## Cloning the Project
 
 To get started with the Monitoring Stack project, follow these steps to clone the Git repository to your local machine:
@@ -133,7 +123,7 @@ To get started with the Monitoring Stack project, follow these steps to clone th
 3. **Change Directory**: Enter the project directory by running:
 
    ```shell
-   cd monitoring/docker
+   cd /youtube/monitoring/docker
    ```
 
 Now you have successfully cloned the Monitoring Stack project to your local machine, and you can proceed with setting up and running the monitoring stack as described in the rest of this readme.
