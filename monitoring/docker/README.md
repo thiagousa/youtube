@@ -52,8 +52,6 @@ Ready to take control of your infrastructure's monitoring? Get started with this
 
 Feel free to customize and expand upon this description as needed for your GitHub project.
 
-![Screenshot](/monitoring/docker/screenshot/docker-design.png)
-
 ## Requirements
 
 To set up your environment effectively for Docker usage, along with Git, it's also important to have a code editor. Here's an updated list of prerequisites:
