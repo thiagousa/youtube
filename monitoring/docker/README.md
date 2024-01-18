@@ -121,7 +121,7 @@ To get started with the Monitoring Stack project, follow these steps to clone th
 3. **Change Directory**: Enter the project directory by running:
 
    ```shell
-   cd /youtube/monitoring/docker
+   cd youtube/monitoring/docker
    ```
 
 Now you have successfully cloned the Monitoring Stack project to your local machine, and you can proceed with setting up and running the monitoring stack as described in the rest of this readme.
