@@ -12,11 +12,11 @@ KinD is a tool for running local Kubernetes clusters using Docker container "nod
 We have created specific guides for each of the following operating systems:
 
 1. **Linux**: For users running any popular distribution of Linux.
-   - [Linux Installation Guide](installing/kind/Ubuntu/README.md)
+   - [Linux Installation Guide](kind/Ubuntu/README.md)
 2. **Windows**: For users on Windows 10 or later.
-   - [Windows Installation Guide](installing/kind/Windows/README.md)
+   - [Windows Installation Guide](kind/Windows/README.md)
 3. **macOS**: For users running macOS.
-   - [macOS Installation Guide](installing/kind/macOS/README.md)
+   - [macOS Installation Guide](kind/macOS/README.md)
 
 Each guide provides a step-by-step process, ensuring a smooth installation experience.
 
