@@ -8,16 +8,11 @@ This guide provides detailed instructions on how to install KinD (Kubernetes in 
 ## Prerequisites
 
 Before starting, ensure you meet the following prerequisites:
-- Docker Desktop for Windows is installed and running.
+- Docker Desktop for Windows is installed and running. [How to install Docker on Windows](https://www.youtube.com/watch?v=8MrnvUSW_34&t=11s)
+
 - You have administrative access to your Windows machine.
 
-## Step 1: Install Docker Desktop for Windows
-
-If Docker Desktop is not already installed, download and install it from the [Docker website](https://www.docker.com/products/docker-desktop).
-
-After installation, make sure Docker is running. You might need to enable Kubernetes in Docker Desktop settings.
-
-## Step 2: Install kubectl
+## Step 1: Install kubectl
 
 kubectl is the Kubernetes command-line tool that lets you interact with Kubernetes clusters. Install it by following these steps:
 
@@ -29,7 +24,7 @@ kubectl is the Kubernetes command-line tool that lets you interact with Kubernet
 kubectl version --client
 ```
 
-## Step 3: Install KinD
+## Step 2: Install KinD
 
 To install KinD on Windows, run the following in your command prompt or PowerShell:
 
@@ -59,6 +54,12 @@ kubectl cluster-info
 ```
 
 You should see the cluster information and status.
+
+## Step 6: Create a pod
+
+```bash
+kubectl cluster-info
+```
 
 ## Conclusion
 

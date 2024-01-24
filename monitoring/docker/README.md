@@ -48,8 +48,9 @@ This project is licensed under the [MIT License](../../LICENSE), so you're free 
 
 Ready to take control of your infrastructure's monitoring? Get started with this Monitoring Stack project and keep your systems running smoothly!
 
-![Watch the Video](https://github.com/thiagousa/youtube/blob/main/monitoring/docker/screenshot/monitoring.png)(https://www.youtube.com/watch?v=eVi-ec7n_7cD)
+[![Monitoring](https://github.com/thiagousa/youtube/blob/main/monitoring/docker/screenshot/monitoring.png)](https://www.youtube.com/watch?v=eVi-ec7n_7cD)
 
+[Watch the Video](https://www.youtube.com/watch?v=eVi-ec7n_7cD)
 
 Feel free to customize and expand upon this description as needed for your GitHub project.
 

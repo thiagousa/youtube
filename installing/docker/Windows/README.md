@@ -5,8 +5,9 @@
 ## Introduction
 This guide details the steps to install Docker on a Windows system. Docker is a versatile tool for developers, facilitating the creation, deployment, and management of containerized applications.
 
-![Watch the Video](docker-windows.png)
+[![How to Install Docker on Windows](docker-windows.png)](https://www.youtube.com/watch?v=8MrnvUSW_34)
 
+[Watch the Video](https://www.youtube.com/watch?v=8MrnvUSW_34)
 
 ## Prerequisites
 - A Windows 10 64-bit: Pro, Enterprise, or Education (Build 15063 or later), or Windows 11
