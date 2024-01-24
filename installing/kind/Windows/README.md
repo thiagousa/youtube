@@ -65,7 +65,7 @@ You should see the cluster information and status.
 ## Step 6: Create a pod
 
 ```bash
-kubectl cluster-info
+kubectl run nginx --image=nginx:latest
 ```
 
 ## Conclusion
