@@ -33,7 +33,7 @@ curl.exe -Lo kind-windows-amd64.exe https://kind.sigs.k8s.io/dl/v0.11.1/kind-win
 ```
 
 ```bash
-mkdir kind
+mkdir c:/kind
 ```
 
 ```bash
