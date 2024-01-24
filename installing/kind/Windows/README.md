@@ -8,7 +8,7 @@ This guide provides detailed instructions on how to install KinD (Kubernetes in 
 ## Prerequisites
 
 Before starting, ensure you meet the following prerequisites:
-- Docker Desktop for Windows is installed and running. [How to install Docker on Windows](https://www.youtube.com/watch?v=8MrnvUSW_34&t=11s)
+- Docker Desktop for Windows is installed and running. [How to install Docker on Windows](https://www.youtube.com/watch?v=8MrnvUSW_34)
 
 - You have administrative access to your Windows machine.
 
