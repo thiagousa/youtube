@@ -4,7 +4,7 @@
 
 This guide provides step-by-step instructions on how to install KinD (Kubernetes in Docker) on a Linux system. KinD is a tool for running local Kubernetes clusters using Docker containers.
 
-![Watch the Video](https://github.com/thiagousa/youtube/blob/main/monitoring/docker/screenshot/monitoring.png)(https://www.youtube.com/watch?v=eVi-ec7n_7cD)
+![Watch the Video](kind-ubuntu.png)
 
 ## Prerequisites
 

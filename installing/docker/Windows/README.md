@@ -5,7 +5,7 @@
 ## Introduction
 This guide details the steps to install Docker on a Windows system. Docker is a versatile tool for developers, facilitating the creation, deployment, and management of containerized applications.
 
-![Watch the Video](https://github.com/thiagousa/youtube/blob/main/monitoring/docker/screenshot/monitoring.png)(https://www.youtube.com/watch?v=eVi-ec7n_7cD)
+![Watch the Video](docker-windows.png)
 
 
 ## Prerequisites

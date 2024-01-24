@@ -3,7 +3,7 @@
 
 This guide outlines the steps to install KinD (Kubernetes in Docker) on a macOS system. KinD is an effective tool for running local Kubernetes clusters using Docker containers.
 
-![Watch the Video](https://github.com/thiagousa/youtube/blob/main/monitoring/docker/screenshot/monitoring.png)(https://www.youtube.com/watch?v=eVi-ec7n_7cD)
+![Watch the Video](kind-macOS.png)
 
 ## Prerequisites
 
