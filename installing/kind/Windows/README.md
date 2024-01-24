@@ -40,7 +40,7 @@ mkdir kind
 Move-Item .\kind-windows-amd64.exe c:\kind\kind.exe
 ```
 
-Add `c:\kind` to your PATH. Replace `v0.11.1` with the latest version of KinD.
+Add `c:\kind` to your PATH. 
 
 ## Step 4: Create a Kubernetes Cluster
 
