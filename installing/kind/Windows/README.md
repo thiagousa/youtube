@@ -30,6 +30,13 @@ To install KinD on Windows, run the following in your command prompt or PowerShe
 
 ```bash
 curl.exe -Lo kind-windows-amd64.exe https://kind.sigs.k8s.io/dl/v0.11.1/kind-windows-amd64
+```
+
+```bash
+mkdir kind
+```
+
+```bash
 Move-Item .\kind-windows-amd64.exe c:\kind\kind.exe
 ```
 
