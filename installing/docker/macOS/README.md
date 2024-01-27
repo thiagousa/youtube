@@ -4,7 +4,10 @@
 ## Introduction
 This guide provides a step-by-step process to install Docker on a macOS system. Docker is an essential tool for developers, allowing for the creation, deployment, and management of containerized applications.
 
-![Watch the Video](docker-macOS.png)
+
+[![How to Install Docker on macOS](docker-macOS.png)](https://www.youtube.com/watch?v=knarlToekQ0)
+
+[Watch the Video](https://www.youtube.com/watch?v=knarlToekQ0)
 
 ## Prerequisites
 - A macOS system
