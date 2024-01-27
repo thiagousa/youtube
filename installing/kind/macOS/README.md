@@ -5,7 +5,7 @@ This guide outlines the steps to install KinD (Kubernetes in Docker) on a macOS 
 
 [![How to Install KinD on macOS](kind-macOS.png)](https://www.youtube.com/watch?v=s1gmbUgVkL4)
 
-![Watch the Video](https://www.youtube.com/watch?v=s1gmbUgVkL4)
+[Watch the Video](https://www.youtube.com/watch?v=s1gmbUgVkL4)
 
 ## Prerequisites
 
