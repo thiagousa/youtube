@@ -8,7 +8,8 @@ This guide outlines the steps to install KinD (Kubernetes in Docker) on a macOS 
 ## Prerequisites
 
 Ensure you have the following prerequisites:
-- Docker Desktop for macOS installed and running.
+- Docker Desktop for MacOS installed and running.
+- Docker Desktop for MacOS is installed and running. [How to install Docker on MacOS](https://www.youtube.com/watch?v=knarlToekQ0&t)
 - Access to a terminal.
 
 ## Step 1: Install Docker Desktop for macOS
