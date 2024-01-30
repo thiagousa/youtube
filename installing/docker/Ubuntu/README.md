@@ -71,6 +71,7 @@ This command downloads a test image and runs it in a container. If the installat
 To use Docker without `sudo`, you need to add your user to the `docker` group:
 
 ```bash
+sudo chmod 666 /var/run/docker.sock
 sudo usermod -aG docker your-username
 ```
 Log out and log back in for this to take effect.
