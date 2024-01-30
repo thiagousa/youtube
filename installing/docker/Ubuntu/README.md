@@ -72,7 +72,7 @@ To use Docker without `sudo`, you need to add your user to the `docker` group:
 
 ```bash
 sudo chmod 666 /var/run/docker.sock
-sudo usermod -aG docker your-username
+sudo usermod -aG docker $user
 ```
 Log out and log back in for this to take effect.
 
