@@ -7,7 +7,7 @@ This guide provides step-by-step instructions on how to install Docker on a Linu
 ![Watch the Video](docker-ubuntu.png)
 
 
-## Prerequisites
+## Requirements
 - A Linux-based operating system
 - Command-line/terminal access
 - Sudo privileges
