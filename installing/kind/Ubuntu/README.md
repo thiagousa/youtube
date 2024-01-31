@@ -6,7 +6,7 @@ This guide provides step-by-step instructions on how to install KinD (Kubernetes
 
 ![Watch the Video](kind-ubuntu.png)
 
-## Prerequisites
+## Requirements
 
 Before you begin, ensure that the following prerequisites are met:
 - Docker is installed and running on your system. [How to install Docker on Ubuntu](https://www.youtube.com/watch?v=8MrnvUSW_34)
