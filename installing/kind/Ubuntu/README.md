@@ -52,7 +52,11 @@ Verify that your cluster is correctly set up:
 ```bash
 kubectl cluster-info
 ```
+## Step 5: Create a pod
 
+```bash
+kubectl run nginx --image=nginx:latest
+```
 You should see the cluster information and its status.
 
 ## Conclusion
