@@ -9,26 +9,10 @@ This guide provides step-by-step instructions on how to install KinD (Kubernetes
 ## Prerequisites
 
 Before you begin, ensure that the following prerequisites are met:
-- Docker is installed and running on your system.
+- Docker is installed and running on your system. [How to install Docker on Ubuntu](https://www.youtube.com/watch?v=8MrnvUSW_34)
 - You have sudo or root access to your Linux system.
 
-## Step 1: Install Docker
-
-If Docker is not installed, you can install it using the following commands:
-
-```bash
-sudo apt-get update
-sudo apt-get install docker.io
-```
-
-Ensure Docker is running:
-
-```bash
-sudo systemctl start docker
-sudo systemctl enable docker
-```
-
-## Step 2: Install kubectl
+## Step 1: Install kubectl
 
 kubectl is the Kubernetes command-line tool that allows you to run commands against Kubernetes clusters. Install it by running:
 
@@ -39,7 +23,7 @@ sudo mv ./kubectl /usr/local/bin/kubectl
 kubectl version --client
 ```
 
-## Step 3: Install KinD
+## Step 2: Install KinD
 
 Now, install KinD using the following command:
 
@@ -51,7 +35,7 @@ sudo mv ./kind /usr/local/bin/kind
 
 Replace `v0.11.1` with the latest KinD version.
 
-## Step 4: Create a Kubernetes Cluster
+## Step 3: Create a Kubernetes Cluster
 
 To create a Kubernetes cluster, simply run:
 
@@ -61,7 +45,7 @@ kind create cluster
 
 This command will create a default cluster named "kind".
 
-## Step 5: Verify Installation
+## Step 4: Verify Installation
 
 Verify that your cluster is correctly set up:
 
