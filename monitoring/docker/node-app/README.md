@@ -2,13 +2,7 @@
 
 ![Project Overview](/monitoring/docker/node-app/screenshot/node-app.png)
 
-## Begin Your Monitoring Journey Now! 🌟
-
 Easily keep an eye on your Docker app with our simple monitoring tool. It's perfect for local checks and getting alerts set up right before you go live.
-
-[![Monitoring Overview](https://github.com/thiagousa/youtube/blob/main/monitoring/docker/screenshot/monitoring.png)](https://www.youtube.com/watch?v=eVi-ec7n_7cD)
-
-[Discover More in Our Video](https://www.youtube.com/watch?v=eVi-ec7n_7cD)
 
 This framework is adaptable for further customization to meet your specific monitoring needs.
 
