@@ -20,6 +20,7 @@ Refer to our [comprehensive guide](https://github.com/thiagousa/youtube/tree/mai
 Generate your application's Docker image, incorporating the exporter for metrics.
 
 ```bash
+cd node-app
 docker build -t node-app:1.0 .
 ```
 
@@ -34,15 +35,15 @@ docker images
 Deploy your Docker image, making sure to expose the necessary port.
 
 ```bash
-docker run -itd -p 3000 --name=node node-app:latest
+docker run -itd -p 3333:3000 --name=node node-app:1.0
 ```
 
 ### Step 4: Validate Application and Metrics
 Use a web browser to check if the application is active and metrics are accessible.
 
 ```bash
-localhost:3000
-localhost:3000/metrics
+localhost:3333
+localhost:3333/metrics
 ```
 
 ### Step 5: Configure Prometheus Scrape Target
@@ -68,6 +69,21 @@ Define your alert conditions within the `alert_rules.yaml` file in Prometheus.
     description: Increase more than 10
 ```
 
+### Step 7: Set Service on Docker Compose file
+Define your app service in the `docker-compose.yaml` . 
+
+```bash
+- alert: Increase more than 10
+  expr: increase(fake_metrics_counter[1m]) > 10
+  for: 15s
+  labels:
+    severity: warning
+  annotations:
+    summary: Increase more than 10
+    description: Increase more than 10
+```
+
+
 ### Step 7: Configure Domain in Hosts File
 
 #### For Linux or MacOS 🏠
@@ -87,6 +103,9 @@ Edit your `/etc/hosts` file to include:
 In the project directory, initiate the services with:
 
 ```bash
+
+cd '/youtube/monitoring'   
+docker compose down
 docker compose up -d
 ```
 
