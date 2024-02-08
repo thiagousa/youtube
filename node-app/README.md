@@ -20,7 +20,6 @@ Refer to our [comprehensive guide](https://github.com/thiagousa/youtube/tree/mai
 Generate your application's Docker image, incorporating the exporter for metrics.
 
 ```bash
-cd node-app
 docker build -t node-app:1.0 .
 ```
 
