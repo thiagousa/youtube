@@ -14,6 +14,10 @@ Refer to our [comprehensive guide](https://github.com/thiagousa/youtube/tree/mai
 
 [Explore the Setup Video](https://www.youtube.com/watch?v=eVi-ec7n_7cD)
 
+
+
+![Project Overview](/node-app/screenshot/project.gif)
+
 ## Installation Guide
 
 ### Step 1: Create Docker Image
