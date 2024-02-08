@@ -176,11 +176,6 @@ Login with the following credentials:
 - User: admin
 - Password: s0W#Pg562^YA
 
-### Node Exporter 🖥️
-
-[Node Exporter](http://nodeexport.acme.net/) is a Prometheus exporter for hardware and OS metrics exposed by *NIX kernels.
-
-![Screenshot](/monitoring/docker/screenshot/nodeexport.png)
 
 ### MailHog 📧
 
@@ -188,32 +183,12 @@ Login with the following credentials:
 
 ![Screenshot](/monitoring/docker/screenshot/mailhog.png)
 
-### Nginx-Proxy-Manager 🌐
-
-[Nginx-Proxy-Manager](http://nginx.acme.net/) simplifies proxying to websites and provides free SSL, all without the hassle of Nginx or Letsencrypt configuration.
-
-![Screenshot](/monitoring/docker/screenshot/nginx.png)
-
-
-Login with the following credentials:
-
-- User: acme@acme.net
-- Password: s0W#Pg562^YA
 
 ### Prometheus Query 📊
 
 [Prometheus Query](http://prometheus.acme.net/) is where you can experiment with various queries and explore your data.
 
 ![Screenshot](/monitoring/docker/screenshot/prometheus.png)
-
-
-### ❌ Stopping Node Exporter to Received the Alert on Mailhog
-
-If you need to stop the Node Exporter, use this command:
-
-```bash
-docker rm --force foobar-exporter
-```
 
 ### 🧹 Deleting All Applications
 
