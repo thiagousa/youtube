@@ -1,6 +1,6 @@
 # The Easy Way to Monitor Your Application Monitoring with Docker 🌟
 
-![Project Overview](/node-app/screenshot/node-app.png)
+![Project Overview](/node-app/screenshot/node.png)
 
 Easily keep an eye on your Docker app with our simple monitoring tool. It's perfect for local checks and getting alerts set up right before you go live.
 
