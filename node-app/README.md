@@ -76,18 +76,16 @@ Define your alert conditions within the `alert_rules.yaml` file in Prometheus.
 Define your app service in the `docker-compose.yaml` . 
 
 ```bash
-- alert: Increase more than 10
-  expr: increase(fake_metrics_counter[1m]) > 10
-  for: 15s
-  labels:
-    severity: warning
-  annotations:
-    summary: Increase more than 10
-    description: Increase more than 10
+  node-app:
+    image: node-app:1.0
+    container_name: node-app
+    ports:
+      - 3000
+    restart: unless-stopped
 ```
 
 
-### Step 7: Configure Domain in Hosts File
+### Step 8: Configure Domain in Hosts File
 
 #### For Linux or MacOS 🏠
 Edit your `/etc/hosts` file to include:
@@ -101,7 +99,7 @@ Edit your `/etc/hosts` file to include:
 - **Open the Hosts File**: 📂 In Notepad, navigate to `C:\Windows\System32\drivers\etc`, change the file type to "All Files (*.*)," and open the `hosts` file.
 - **Edit and Save**: 🖋️ Add the required entries and save your changes.
 
-### Step 8: 🐳 Deploy Using Docker Compose
+### Step 9: 🐳 Deploy Using Docker Compose
 
 In the project directory, initiate the services with:
 
@@ -112,13 +110,13 @@ docker compose down
 docker compose up -d
 ```
 
-### Step 9: 🔗 Access the Monitoring Services
+### Step 10: 🔗 Access the Monitoring Services
 
 Navigate to [All Services](http://services.acme.net) for full access to the monitoring components.
 
 ![Services Screenshot](/monitoring/docker/screenshot/services.png)
 
-### Step 10: Configure NGINX Proxy
+### Step 11: Configure NGINX Proxy
 
 #### Nginx-Proxy-Manager 🌐
 
