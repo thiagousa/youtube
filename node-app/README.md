@@ -1,6 +1,6 @@
 # The Easy Way to Monitor Your Application Monitoring with Docker 🌟
 
-![Project Overview](/monitoring/docker/node-app/screenshot/node-app.png)
+![Project Overview](/node-app/screenshot/node-app.png)
 
 Easily keep an eye on your Docker app with our simple monitoring tool. It's perfect for local checks and getting alerts set up right before you go live.
 
@@ -13,6 +13,10 @@ Ensure you have the Monitoring Stack installed, including Prometheus, AlertManag
 Refer to our [comprehensive guide](https://github.com/thiagousa/youtube/tree/main/monitoring/docker) for detailed installation instructions, enabling you to set up your monitoring stack effortlessly.
 
 [Explore the Setup Video](https://www.youtube.com/watch?v=eVi-ec7n_7cD)
+
+
+
+![Project Overview](/node-app/screenshot/project.gif)
 
 ## Installation Guide
 
@@ -34,15 +38,15 @@ docker images
 Deploy your Docker image, making sure to expose the necessary port.
 
 ```bash
-docker run -itd -p 3000 --name=node node-app:latest
+docker run -itd -p 3333:3000 --name=node node-app:1.0
 ```
 
 ### Step 4: Validate Application and Metrics
 Use a web browser to check if the application is active and metrics are accessible.
 
 ```bash
-localhost:3000
-localhost:3000/metrics
+localhost:3333
+localhost:3333/metrics
 ```
 
 ### Step 5: Configure Prometheus Scrape Target
@@ -68,7 +72,20 @@ Define your alert conditions within the `alert_rules.yaml` file in Prometheus.
     description: Increase more than 10
 ```
 
-### Step 7: Configure Domain in Hosts File
+### Step 7: Set Service on Docker Compose file
+Define your app service in the `docker-compose.yaml` . 
+
+```bash
+  node-app:
+    image: node-app:1.0
+    container_name: node-app
+    ports:
+      - 3000
+    restart: unless-stopped
+```
+
+
+### Step 8: Configure Domain in Hosts File
 
 #### For Linux or MacOS 🏠
 Edit your `/etc/hosts` file to include:
@@ -82,21 +99,24 @@ Edit your `/etc/hosts` file to include:
 - **Open the Hosts File**: 📂 In Notepad, navigate to `C:\Windows\System32\drivers\etc`, change the file type to "All Files (*.*)," and open the `hosts` file.
 - **Edit and Save**: 🖋️ Add the required entries and save your changes.
 
-### Step 8: 🐳 Deploy Using Docker Compose
+### Step 9: 🐳 Deploy Using Docker Compose
 
 In the project directory, initiate the services with:
 
 ```bash
+
+cd '/youtube/monitoring'   
+docker compose down
 docker compose up -d
 ```
 
-### Step 9: 🔗 Access the Monitoring Services
+### Step 10: 🔗 Access the Monitoring Services
 
 Navigate to [All Services](http://services.acme.net) for full access to the monitoring components.
 
 ![Services Screenshot](/monitoring/docker/screenshot/services.png)
 
-### Step 10: Configure NGINX Proxy
+### Step 11: Configure NGINX Proxy
 
 #### Nginx-Proxy-Manager 🌐
 
