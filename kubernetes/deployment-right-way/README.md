@@ -2,7 +2,7 @@
 
 ![Project Overview](/kubernetes/deployment-right-way/screenshot/deploy-on-kubernetes.jpeg)
 
-Dive into Kubernetes with confidence! This guide is crafted to illuminate the path for beginners and refine the techniques of seasoned users, ensuring deployments are executed flawlessly. Avoid the common pitfalls and learn the right way to deploy with ease and precision.
+"This project will teach you the correct way to deploy applications in Kubernetes. It's designed to help beginners avoid common mistakes they might make when starting out with Kubernetes."
 
 ## Requirements
 
