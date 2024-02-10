@@ -2,7 +2,7 @@
 
 ![Project Overview](/kubernetes/deployment-right-way/screenshot/deploy-on-kubernetes.jpeg)
 
-"This project will teach you the correct way to deploy applications in Kubernetes. It's designed to help beginners avoid common mistakes they might make when starting out with Kubernetes."
+"This project will teach you the correct way to deploy applications in Kubernetes. It's designed to help beginners avoid common mistakes when starting with Kubernetes."
 
 ## Requirements
 
@@ -43,18 +43,27 @@
    ```
    kubectl run pod-wrong-way --image="thiagousa/wrong:latest" --port=80
    ```
-2. **Expose the Pod:**
+
+2. **Verify pod:**
+   ```
+   kubectl get pod 
+   kubectl describe pod-wrong-way
+   
+3. **Expose the Pod:**
    ```
    kubectl expose pod pod-wrong-way --port 80
    ```
-3. **Port-forwarding pod:**
+4. **Port-forwarding pod:**
    ```
    kubectl port-forward svc/pod-wrong-way 8888:80
    ```
-4. **Delete pod:**
+6. **Access & Validate:** Visit http://localhost:8888/ to see your deployment in action.
+
+7. **Delete pod:**
    ```
    kubectl delete pod pod-wrong-way
    ```
+8. **Access & Validate:** Visit http://localhost:9999/ to see your deployment in action.
 
 ## The Correct Deployment Strategy
 
@@ -64,7 +73,8 @@
    ```
 2. **Verify pod:**
    ```
-   kubectl get pod
+   kubectl get pod 
+   kubectl describe pod pod-right-way-{}
    ```
 3. **Expose the deployment:**
    ```
@@ -79,14 +89,16 @@
    ```
    kubectl delete deployment pod-right-way
    ```
+7. **Access & Validate:** Visit http://localhost:9999/ to see your deployment in action.
+
 ## Delete Cluster
    ```
    kind delete cluster
    ```
 ## Support My Work
 
-Creating free, high-quality videos and resources for everyone is challenging. Your support enables me to invest more in content creation, enhancing overall quality. Becoming a member offers significant support and comes with cool perks as a token of appreciation.
+Creating accessible, high-quality videos and resources for everyone is challenging. Your support enables me to invest more in content creation, enhancing overall quality. Becoming a member offers significant support and comes with fantastic perks as a token of appreciation.
 
-Remember, ***support is optional***. Whether you choose to become a member or not, you'll have full access to all my videos and resources.
+Remember, ***support is optional***. Whether you become a member or not, you'll have full access to all my videos and resources.
 
 Support here: [https://www.patreon.com/thiagodsantos](https://www.patreon.com/thiagodsantos) or [https://www.buymeacoffee.com/thiagodsantos](https://www.buymeacoffee.com/thiagodsantos)
