@@ -52,6 +52,7 @@
 3. **Expose the Pod:**
    ```
    kubectl expose pod pod-wrong-way --port 80
+   kubectl get service
    ```
 4. **Port-forwarding pod:**
    ```
@@ -65,11 +66,11 @@
    ```
 8. **Access & Validate:** Visit http://localhost:9999/ to see your deployment in action.
 
-## The Correct Deployment Strategy
+## Installation Guide for the Wrong Way
 
 1. **Create a deployment:**
    ```
-   kubectl create deployment pod-right-way --image=thiagousa/right:latest --port=80 --replicas=1
+   kubectl create deployment pod-right-way --image=thiagousa/right:latest --port=80 --replicas=2
    ```
 2. **Verify pod:**
    ```
@@ -79,17 +80,19 @@
 3. **Expose the deployment:**
    ```
    kubectl expose deployment pod-right-way --port 80
+   kubectl get service
    ```
 4. ** Port Forward the Service**
    ```
    kubectl port-forward svc/pod-right-way 9999:80
    ```
 5. **Access & Validate:** Visit http://localhost:9999/ to see your deployment in action.
+   
 6. **Delete pod:**
    ```
    kubectl delete deployment pod-right-way
    ```
-7. **Access & Validate:** Visit http://localhost:9999/ to see your deployment in action.
+8. **Access & Validate:** Visit http://localhost:9999/ to see your deployment in action.
 
 ## Delete Cluster
    ```
