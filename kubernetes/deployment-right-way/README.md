@@ -1,4 +1,4 @@
-# Deploy on Kubernetes on the Right way 🌟
+# Deploy on Kubernetes the Right way 🌟
 
 ![Project Overview](/kubernetes/deployment-right-way/screenshot/deploy-on-kubernetes.jpeg)
 
