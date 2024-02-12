@@ -66,7 +66,7 @@
    ```
 8. **Access & Validate:** Visit http://localhost:9999/ to see your deployment in action.
 
-## Installation Guide for the Wrong Way
+## Installation Guide for the Right Way
 
 1. **Create a deployment:**
    ```
