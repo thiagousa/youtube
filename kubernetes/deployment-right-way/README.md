@@ -44,10 +44,10 @@
    kubectl run pod-wrong-way --image="thiagousa/wrong:latest" --port=80
    ```
 
-2. **Verify pod:**
+2. **Check the pod:**
    ```
    kubectl get pod 
-   kubectl describe pod-wrong-way
+   kubectl describe pod pod-wrong-way
    
 3. **Expose the Pod:**
    ```
@@ -70,9 +70,9 @@
 
 1. **Create a deployment:**
    ```
-   kubectl create deployment pod-right-way --image=thiagousa/right:latest --port=80 --replicas=2
+   kubectl create deployment pod-right-way --image=thiagousa/right:latest --port=80 --replicas=1
    ```
-2. **Verify pod:**
+2. **Check the pod:**
    ```
    kubectl get pod 
    kubectl describe pod pod-right-way-{}
@@ -90,7 +90,11 @@
    
 6. **Delete pod:**
    ```
-   kubectl delete deployment pod-right-way
+   kubectl delete pod pod-right-way
+   ```
+5. ** Port Forward the Service**
+   ```
+   kubectl port-forward svc/pod-right-way 9999:80
    ```
 8. **Access & Validate:** Visit http://localhost:9999/ to see your deployment in action.
 
