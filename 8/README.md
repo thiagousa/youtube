@@ -1,6 +1,8 @@
 # The Easy Way to Monitor Your Application Monitoring with Docker 🌟
 
-![Project Overview](/node-app/screenshot/node.png)
+[![The Easy Way to Monitor Your Application Monitoring with Docker](/8/screenshot/node-app.png)](https://youtu.be/4D5mFAiMtqs)
+
+[Watch the Video](https://youtu.be/4D5mFAiMtqs)
 
 Easily keep an eye on your Docker app with our simple monitoring tool. It's perfect for local checks and getting alerts set up right before you go live.
 
@@ -16,7 +18,7 @@ Refer to our [comprehensive guide](https://github.com/thiagousa/youtube/tree/mai
 
 
 
-![Project Overview](/node-app/screenshot/project.gif)
+![Project Overview](/8/screenshot/project.gif)
 
 ## Installation Guide
 
@@ -114,7 +116,7 @@ docker compose up -d
 
 Navigate to [All Services](http://services.acme.net) for full access to the monitoring components.
 
-![Services Screenshot](/monitoring/docker/screenshot/services.png)
+![Services Screenshot](/1/screenshot/services.png)
 
 ### Step 11: Configure NGINX Proxy
 
@@ -122,7 +124,7 @@ Navigate to [All Services](http://services.acme.net) for full access to the moni
 
 Utilize [Nginx-Proxy-Manager](http://nginx.acme.net/) for easy web proxying and SSL configuration, bypassing the complexities of manual Nginx or Letsencrypt setup.
 
-![Nginx Screenshot](/monitoring/docker/screenshot/nginx.png)
+![Nginx Screenshot](/1/screenshot/nginx.png)
 
 Log in with the credentials provided:
 
@@ -149,13 +151,13 @@ This revised README provides a more professional tone and structure, along with 
 
 [AlertManager](http://alertmanager.acme.net/#/alerts) handles alerts sent by client applications, deduplicates, groups, routes, and delivers them to the right receiver. It also takes care of silencing and inhibition of alerts.
 
-![Screenshot](/monitoring/docker/screenshot/alertmanager.png)
+![Screenshot](/1/screenshot/alertmanager.png)
 
 ### Grafana 📊
 
 [Grafana](http://grafana.acme.net/) is your open-source analytics and monitoring solution. Use it to visualize your data from various sources.
 
-![Screenshot](/monitoring/docker/screenshot/grafana.png)
+![Screenshot](/1/screenshot/grafana.png)
 
 
 
@@ -181,14 +183,14 @@ Login with the following credentials:
 
 [MailHog](http://mailhog.acme.net/) is an email testing tool for developers, perfect for configuring SMTP delivery for your applications.
 
-![Screenshot](/monitoring/docker/screenshot/mailhog.png)
+![Screenshot](/1/screenshot/mailhog.png)
 
 
 ### Prometheus Query 📊
 
 [Prometheus Query](http://prometheus.acme.net/) is where you can experiment with various queries and explore your data.
 
-![Screenshot](/monitoring/docker/screenshot/prometheus.png)
+![Screenshot](/1/screenshot/prometheus.png)
 
 ### 🧹 Deleting All Applications
 

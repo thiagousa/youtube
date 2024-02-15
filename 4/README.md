@@ -1,4 +1,3 @@
----
 # How to Install Docker on macOS
 
 ## Introduction
@@ -9,7 +8,7 @@ This guide provides a step-by-step process to install Docker on a macOS system. 
 
 [Watch the Video](https://www.youtube.com/watch?v=knarlToekQ0)
 
-## Prerequisites
+## Requirements 
 - A macOS system
 - Administrative access
 

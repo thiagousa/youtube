@@ -1,5 +1,3 @@
----
-
 # How to Install Docker on Windows
 
 ## Introduction
@@ -9,7 +7,7 @@ This guide details the steps to install Docker on a Windows system. Docker is a 
 
 [Watch the Video](https://www.youtube.com/watch?v=8MrnvUSW_34)
 
-## Prerequisites
+## Requirements 
 - A Windows 10 64-bit: Pro, Enterprise, or Education (Build 15063 or later), or Windows 11
 - Hyper-V and Containers Windows features must be enabled
 - BIOS-level hardware virtualization support must be enabled in the BIOS settings
