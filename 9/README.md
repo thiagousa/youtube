@@ -2,6 +2,10 @@
 
 ![Project Overview](/9/screenshot/deploy-on-kubernetes.jpeg)
 
+[![The Right Way to Deploy on Kubernetes](/9/screenshot/deploy-on-kubernetes.jpeg)](https://www.youtube.com/watch?v=mHR3Ic1dpVU)
+
+[Watch the Video](https://www.youtube.com/watch?v=mHR3Ic1dpVU)
+
 "This project will teach you the correct way to deploy applications in Kubernetes. It's designed to help beginners avoid common mistakes when starting with Kubernetes."
 
 ## Requirements
