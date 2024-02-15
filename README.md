@@ -1,26 +1,28 @@
+Welcome to DevOps Thiago!!!
+
 On my [YouTube channel](https://www.youtube.com/@devopsthiago), I share engaging videos, tutorials, and write-ups that simplify complex IT topics. I aim to provide practical and valuable insights for tech enthusiasts and those curious about the world of IT. My passion for IT and sharing knowledge is the driving force behind my content, which I hope inspires others to delve into and experiment with technology.
 
 Visit my YouTube channel: [https://www.youtube.com/@devopsthiago](https://www.youtube.com/@devopsthiago)
 
 ## Quick Links to Youtube Guides
 
-1 - [Monitoring Stack for Infrastructure](/youtube/1/monitoring/docker/README.md)
+1 - [Monitoring Stack for Infrastructure](youtube/1/README.md)
 
-2 - [How to Install Docker on Windows](/youtube/2/Windows/README.md)
+2 - [How to Install Docker on Windows](youtube/2/README.md)
 
-3 - [How to install Kind on Windows](/youtube/3/Windows/README.md)
+3 - [How to install Kind on Windows](youtube/3/README.md)
 
-4 - [How to Install Docker on MacOS](/youtube/4/macOS/README.md)
+4 - [How to Install Docker on MacOS](youtube/4/README.md)
     
-5 - [How to Install Kind on MacOS](/youtube/5/macOS/README.md)
+5 - [How to Install Kind on MacOS](youtube/5/README.md)
 
-6 - [How to Install Kind on Ubuntu](/youtube/6/kind/README.md)
+6 - [How to Install Kind on Ubuntu](youtube/6/README.md)
 
-7 - [How to Install Docker on Ubuntu](/youtube/7/Ubuntu/README.md)
+7 - [How to Install Docker on Ubuntu](youtube/7/README.md)
 
-8 - [The Easy Way to Monitor Your Application with Docker](/youtube/8/node-app/README.md)
+8 - [The Easy Way to Monitor Your Application with Docker](youtube/8/README.md)
 
-9 - [The Right Way to Deploy on Kubernetes](/youtube/9/kubernetes/deployment-right-way/README.md)
+9 - [The Right Way to Deploy on Kubernetes](youtube/9/README.md)
 
 
 
