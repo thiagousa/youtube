@@ -11,7 +11,7 @@ This guide provides step-by-step instructions on how to install KinD (Kubernetes
 ## Requirements
 
 Before you begin, ensure that the following prerequisites are met:
-- Docker is installed and running on your system. [How to install Docker on Ubuntu](https://www.youtube.com/watch?v=rFAQRhi-Vs0)
+- Docker is installed and running on your system. [How to install Docker on Ubuntu](https://youtu.be/f1JqnioiCaQ)
 - You have sudo or root access to your Linux system.
 
 ## Step 1: Install kubectl

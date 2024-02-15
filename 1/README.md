@@ -1,6 +1,6 @@
 # Monitoring Stack with Prometheus, AlertManager, Grafana, Node Exporter, MailHog, and NGINX 🚀
 
-![Project Preview](https://github.com/thiagousa/youtube/blob/main/monitoring/docker/screenshot/docker-design.png)
+![Project Preview](/1/screenshot/docker-design.png)
 
 Welcome to the Monitoring Stack project, a robust and comprehensive solution for monitoring and managing your infrastructure. This project combines powerful open-source tools to help you keep learning the monitoring infrastruture. 
 
@@ -22,7 +22,7 @@ This project provides an out-of-the-box setup for a monitoring stack that includ
 
 ## Getting Started 🚀
 
-Follow the detailed setup instructions in the [project's documentation](https://github.com/thiagousa/youtube/tree/main/monitoring/docker) to get your monitoring stack up and running in no time. With just a few simple steps, you'll have access to a fully functional monitoring environment.
+With just a few simple steps, you'll have access to a fully functional monitoring environment.
 
 ## Features and Benefits 🌟
 
@@ -38,19 +38,19 @@ Follow the detailed setup instructions in the [project's documentation](https://
 
 ## How to Contribute 🤝
 
-Contributions to this project are welcome! Whether you want to fix a bug, improve documentation, or add new features, please check out our [Contribution Guidelines](../../CONTRIBUTING.md) to get started.
+Contributions to this project are welcome! Whether you want to fix a bug, improve documentation, or add new features, please check out our [Contribution Guidelines](../CONTRIBUTING.md) to get started.
 
 ## License 📜
 
-This project is licensed under the [MIT License](../../LICENSE), so you're free to use it in your own projects.
+This project is licensed under the [MIT License](../LICENSE), so you're free to use it in your own projects.
 
 ## Get Started Today! 🚀
 
 Ready to take control of your infrastructure's monitoring? Get started with this Monitoring Stack project and keep your systems running smoothly!
 
-[![Monitoring](https://github.com/thiagousa/youtube/blob/main/monitoring/docker/screenshot/monitoring.png)](https://www.youtube.com/watch?v=eVi-ec7n_7cD)
+[![Monitoring](/1/screenshot/monitoring.png)](https://youtu.be/eVi-ec7n_7c)
 
-[Watch the Video](https://www.youtube.com/watch?v=eVi-ec7n_7cD)
+[Watch the Video](https://youtu.be/eVi-ec7n_7c)
 
 Feel free to customize and expand upon this description as needed for your GitHub project.
 
@@ -58,7 +58,16 @@ Feel free to customize and expand upon this description as needed for your GitHu
 
 To set up your environment effectively for Docker usage, along with Git, it's also important to have a code editor. Here's an updated list of prerequisites:
 
-1. **Docker Desktop**: This application is essential for running containerized applications. Ensure that Docker Desktop is installed and running on your system. You can download it from [Docker's official website](https://www.docker.com/products/docker-desktop).
+1. **Docker Desktop**: This application is essential for running containerized applications. Ensure that Docker Desktop is installed and running on your system.
+   ### Youtube Guide
+
+   - [How to install Docker on Windows](https://www.youtube.com/watch?v=8MrnvUSW_34)
+
+   - [How to install Docker on MacOS](https://www.youtube.com/watch?v=knarlToekQ0&t)
+
+   - [How to install Docker on Ubuntu](https://www.youtube.com/watch?v=rFAQRhi-Vs0)
+
+   You can download it from [Docker's official website](https://www.docker.com/products/docker-desktop).
 
 2. **Git**: A version control system that is crucial for code management, especially when collaborating in a team. It helps in tracking changes in source code during software development. Download Git from [Git's official website](https://git-scm.com/downloads).
 
@@ -149,7 +158,7 @@ Visit [All Services](http://services.acme.net) to access the various components 
 ### Prometheus 📈
 
 [Prometheus](http://prometheus.acme.net) is your trusty metrics collection and storage tool. It stores data with timestamps and optional labels, allowing you to monitor and analyze your systems effectively.
-![Screenshot](/monitoring/docker/screenshot/prometheus.png)
+![Screenshot](/1/screenshot/prometheus.png)
 
 
 #### Configuration Files
@@ -161,13 +170,13 @@ Visit [All Services](http://services.acme.net) to access the various components 
 
 [AlertManager](http://alertmanager.acme.net/#/alerts) handles alerts sent by client applications, deduplicates, groups, routes, and delivers them to the right receiver. It also takes care of silencing and inhibition of alerts.
 
-![Screenshot](/monitoring/docker/screenshot/alertmanager.png)
+![Screenshot](/1/screenshot/alertmanager.png)
 
 ### Grafana 📊
 
 [Grafana](http://grafana.acme.net/) is your open-source analytics and monitoring solution. Use it to visualize your data from various sources.
 
-![Screenshot](/monitoring/docker/screenshot/grafana.png)
+![Screenshot](/1/screenshot/grafana.png)
 
 
 
@@ -192,19 +201,19 @@ Login with the following credentials:
 
 [Node Exporter](http://nodeexport.acme.net/) is a Prometheus exporter for hardware and OS metrics exposed by *NIX kernels.
 
-![Screenshot](/monitoring/docker/screenshot/nodeexport.png)
+![Screenshot](/1/screenshot/nodeexport.png)
 
 ### MailHog 📧
 
 [MailHog](http://mailhog.acme.net/) is an email testing tool for developers, perfect for configuring SMTP delivery for your applications.
 
-![Screenshot](/monitoring/docker/screenshot/mailhog.png)
+![Screenshot](/1/screenshot/mailhog.png)
 
 ### Nginx-Proxy-Manager 🌐
 
 [Nginx-Proxy-Manager](http://nginx.acme.net/) simplifies proxying to websites and provides free SSL, all without the hassle of Nginx or Letsencrypt configuration.
 
-![Screenshot](/monitoring/docker/screenshot/nginx.png)
+![Screenshot](/1/screenshot/nginx.png)
 
 
 Login with the following credentials:
@@ -216,7 +225,7 @@ Login with the following credentials:
 
 [Prometheus Query](http://prometheus.acme.net/) is where you can experiment with various queries and explore your data.
 
-![Screenshot](/monitoring/docker/screenshot/prometheus.png)
+![Screenshot](/1/screenshot/prometheus.png)
 
 
 ### ❌ Stopping Node Exporter to Received the Alert on Mailhog

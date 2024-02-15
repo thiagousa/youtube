@@ -1,10 +1,9 @@
----
 # How to Install Docker on Linux
 
 ## Introduction
 This guide provides step-by-step instructions on how to install Docker on a Linux system. Docker is a powerful platform for building, deploying, and managing containerized applications. 
 
-![Watch the Video](
+
 
 [![How to Install Docker on Ubuntu](docker-ubuntu.png)](https://www.youtube.com/watch?v=f1JqnioiCaQ)
 

@@ -1,4 +1,3 @@
----
 # Kind Installation Guide for Windows
 
 This guide provides detailed instructions on how to install KinD (Kubernetes in Docker) on a Windows system. KinD is a powerful tool for running local Kubernetes clusters using Docker containers.
@@ -9,7 +8,7 @@ This guide provides detailed instructions on how to install KinD (Kubernetes in 
 
 [Watch the Video](https://www.youtube.com/watch?v=kbeqNY0v0c4&t)
 
-## Prerequisites
+## Requirements 
 
 Before starting, ensure you meet the following prerequisites:
 - Docker Desktop for Windows is installed and running. [How to install Docker on Windows](https://www.youtube.com/watch?v=8MrnvUSW_34)

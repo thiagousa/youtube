@@ -16,7 +16,7 @@
 
 **For MacOS Users:**
 - Docker Desktop for MacOS installed. [Guide](https://www.youtube.com/watch?v=knarlToekQ0&t)
-- Kind installed. [Guide](https://www.youtube.com/watch?v=s1gmbUgVkL)
+- Kind installed. [Guide](https://youtu.be/s1gmbUgVkL4)
 
 ### Initial Steps:
 1. **Clone the repository:**
@@ -25,7 +25,7 @@
    ```
 2. **Navigate to the project directory:**
    ```
-   cd youtube/kubernetes/deployment-right-way
+   cd \youtube\9
    ```
 3. **Create the Kind Kubernetes Cluster:**
    ```
