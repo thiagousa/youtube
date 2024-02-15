@@ -6,23 +6,23 @@ Visit my YouTube channel: [https://www.youtube.com/@devopsthiago](https://www.yo
 
 ## Quick Links to Youtube Guides
 
-1 - [Monitoring Stack for Infrastructure](youtube/1/README.md)
+1 - [Monitoring Stack for Infrastructure](/1/README.md)
 
-2 - [How to Install Docker on Windows](youtube/2/README.md)
+2 - [How to Install Docker on Windows](/2/README.md)
 
-3 - [How to install Kind on Windows](youtube/3/README.md)
+3 - [How to install Kind on Windows](/3/README.md)
 
-4 - [How to Install Docker on MacOS](youtube/4/README.md)
+4 - [How to Install Docker on MacOS](/4/README.md)
     
-5 - [How to Install Kind on MacOS](youtube/5/README.md)
+5 - [How to Install Kind on MacOS](/5/README.md)
 
-6 - [How to Install Kind on Ubuntu](youtube/6/README.md)
+6 - [How to Install Kind on Ubuntu](/6/README.md)
 
-7 - [How to Install Docker on Ubuntu](youtube/7/README.md)
+7 - [How to Install Docker on Ubuntu](/7/README.md)
 
-8 - [The Easy Way to Monitor Your Application with Docker](youtube/8/README.md)
+8 - [The Easy Way to Monitor Your Application with Docker](/8/README.md)
 
-9 - [The Right Way to Deploy on Kubernetes](youtube/9/README.md)
+9 - [The Right Way to Deploy on Kubernetes](/9/README.md)
 
 
 
