@@ -1,6 +1,6 @@
 # The Right Way to Deploy on Kubernetes  🌟
 
-![Project Overview](/kubernetes/deployment-right-way/screenshot/deploy-on-kubernetes.jpeg)
+![Project Overview](/9/screenshot/deploy-on-kubernetes.jpeg)
 
 "This project will teach you the correct way to deploy applications in Kubernetes. It's designed to help beginners avoid common mistakes when starting with Kubernetes."
 
@@ -25,7 +25,7 @@
    ```
 2. **Navigate to the project directory:**
    ```
-   cd \youtube\9
+   cd youtube\9
    ```
 3. **Create the Kind Kubernetes Cluster:**
    ```

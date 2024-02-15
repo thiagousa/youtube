@@ -132,7 +132,7 @@ To get started with the Monitoring Stack project, follow these steps to clone th
 3. **Change Directory**: Enter the project directory by running:
 
    ```shell
-   cd 1/
+   cd youtube/1/
    ```
 
 Now you have successfully cloned the Monitoring Stack project to your local machine, and you can proceed with setting up and running the monitoring stack as described in the rest of this readme.
