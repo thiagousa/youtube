@@ -81,6 +81,15 @@ You've successfully installed KinD on your macOS system and created a Kubernetes
 
 For more detailed information and advanced configurations, visit the [KinD Documentation](https://kind.sigs.k8s.io/docs/user/quick-start/).
 
+## How to Contribute 🤝
+
+Contributions to this project are welcome! Whether you want to fix a bug, improve documentation, or add new features, please check out our [Contribution Guidelines](../CONTRIBUTING.md) to get started.
+
+## License 📜
+
+This project is licensed under the [MIT License](../LICENSE), so you're free to use it in your own projects.
+
+
 ## Support My Work
 
 Creating free, high-quality videos and resources for everyone is challenging. Your support enables me to invest more in content creation, enhancing overall quality. Becoming a member offers significant support and comes with cool perks as a token of appreciation.
