@@ -1,9 +1,5 @@
 # How to Run Ubuntu as a Docker Container (fast & easy)🌟
 
-[![VIDEO NAME](#SCREENSHOT PICTURE)](YOUTUBE LINK)
-
-[Watch the Video](YOUTUBE LINK)
-
 "This project will show you how to easily create an Ubuntu Container using Docker."
 
 ## Requirements
