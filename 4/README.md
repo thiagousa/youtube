@@ -58,6 +58,13 @@ No additional post-installation steps are required for Docker on macOS. Docker s
 ## Conclusion
 Docker is now installed and operational on your macOS system. For more detailed information and advanced features, visit the [Docker documentation](https://docs.docker.com/docker-for-mac/).
 
+## How to Contribute 🤝
+
+Contributions to this project are welcome! Whether you want to fix a bug, improve documentation, or add new features, please check out our [Contribution Guidelines](../CONTRIBUTING.md) to get started.
+
+## License 📜
+
+This project is licensed under the [MIT License](../LICENSE), so you're free to use it in your own projects.
 
 ## Support My Work
 

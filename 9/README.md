@@ -104,6 +104,14 @@
    ```
    kind delete cluster
    ```
+## How to Contribute 🤝
+
+Contributions to this project are welcome! Whether you want to fix a bug, improve documentation, or add new features, please check out our [Contribution Guidelines](../CONTRIBUTING.md) to get started.
+
+## License 📜
+
+This project is licensed under the [MIT License](../LICENSE), so you're free to use it in your own projects.
+
 ## Support My Work
 
 Creating accessible, high-quality videos and resources for everyone is challenging. Your support enables me to invest more in content creation, enhancing overall quality. Becoming a member offers significant support and comes with fantastic perks as a token of appreciation.
