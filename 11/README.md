@@ -22,17 +22,17 @@
 ### Steps:
 
 1. **Clone the repository:**
-   ```
-   git clone https://github.com/thiagousa/youtube.git
-   ```
+```
+git clone https://github.com/thiagousa/youtube.git
+```
 2. **Navigate to the project directory:**
-   ```
-   cd youtube\11
-   ```
+```
+cd youtube\11
+```
 3. **Download the Ubuntu image**
-   ```bash
-   docker pull nginx:latest
-   ```
+```bash
+docker pull nginx:latest
+```
 4. Create Docker Image
 Generate your application's Docker image
 
