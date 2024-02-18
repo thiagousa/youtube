@@ -58,30 +58,39 @@ docker run -itd -p 8888:80 --name=my-docker-image --v=./:/usr/share/nginx/html/ 
 ```bash
 localhost:8888
 ```
-8. **Delete the Ubuntu container**
+8. **Access the Docker Ubuntu Container**
+   ```bash
+   docker exec -it ubuntu bash 
+   ```
+9. **Open htop app**
+   ```bash
+   htop
+   ```
+
+10. **Delete the Ubuntu container**
    ```bash
    docker rm  my-docker-image --force
     ```
 
-9. Create Docker Image
+11. Create Docker Image
 Generate your application's Docker image
 
 ```bash
 docker build -t my-docker-image:2.0 .
 ```
 
-10. **Launch Docker Image**
+12. **Launch Docker Image**
 
 ```bash
 docker run -itd -p 8888:80 --name=my-docker-image my-docker-image:2.0
 ```
 
-11. Validate Application Use a web browser to check if the application are active and accessible.
+13. Validate Application Use a web browser to check if the application are active and accessible.
 
 ```bash
 localhost:8888
 ```
-12. **Delete the Ubuntu container**
+14. **Delete the Ubuntu container**
    ```bash
    docker rm  my-docker-image --force
     ```
