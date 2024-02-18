@@ -21,68 +21,67 @@
 
 ### Steps:
 
-1. **Download the Ubuntu image**
+1. **Clone the repository:**
+   ```
+   git clone https://github.com/thiagousa/youtube.git
+   ```
+2. **Navigate to the project directory:**
+   ```
+   cd youtube\11
+   ```
+3. **Download the Ubuntu image**
    ```bash
    docker pull nginx:latest
    ```
-2. Create Docker Image
+4. Create Docker Image
 Generate your application's Docker image
 
 ```bash
 docker build -t my-docker-image:1.0 .
 ```
 
-3. Verify Image Creation
+5. Verify Image Creation
 Confirm the Docker image has been successfully created.
-
 ```bash
 docker images
 ```
 
-4. Launch Docker Image
+6. Launch Docker Image
 Deploy your Docker image, making sure to expose the necessary port.
 
 ```bash
 docker run -itd -p 8888:80 --name=my-docker-image --v=./:/usr/share/nginx/html/ my-docker-image:1.0
 ```
 
-5. Validate Application Use a web browser to check if the application are active and accessible.
+7. Validate Application Use a web browser to check if the application are active and accessible.
 
 ```bash
 localhost:8888
 ```
-6. **Access the Docker Ubuntu Container**
-   ```bash
-   docker exec -it my-docker-image bash 
-   ```
-
-7. **Open htop app**
-   ```bash
-   htop
-   ```
-8. **Exit the container**
-   
-   ```
-   exit
-   ```
-
-10. **Delete the Ubuntu container**
+8. **Delete the Ubuntu container**
    ```bash
    docker rm  my-docker-image --force
     ```
 
-11. **Launch Docker Image**
+9. Create Docker Image
+Generate your application's Docker image
 
 ```bash
-docker run -itd -p 8888:80 --name=my-docker-image my-docker-image:1.0
+docker build -t my-docker-image:2.0 .
 ```
 
-12. Validate Application Use a web browser to check if the application are active and accessible.
+10. **Launch Docker Image**
+
+```bash
+docker run -itd -p 8888:80 --name=my-docker-image my-docker-image:2.0
+```
+
+11. Validate Application Use a web browser to check if the application are active and accessible.
 
 ```bash
 localhost:8888
 ```
-13. **Delete the Ubuntu container**
+12. **Delete the Ubuntu container**
    ```bash
    docker rm  my-docker-image --force
     ```
