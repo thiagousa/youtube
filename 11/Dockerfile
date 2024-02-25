@@ -1,10 +1,10 @@
 FROM nginx:1.25.4-alpine-slim
 
-RUN apt update
+RUN apk update && apk upgrade
 
-RUN apt install htop -y
+RUN apk add htop
 
-COPY index.html /usr/share/nginx/html/index.html
+COPY files/index.html /usr/share/nginx/html/index.html
 
 # Environment
 # ENV PRODUCTION=true

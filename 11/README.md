@@ -21,7 +21,7 @@ git clone https://github.com/thiagousa/youtube.git
 ```
 2. **Navigate to the project directory:**
 ```
-cd youtube\11
+cd youtube/11
 ```
 3. **Download the Ubuntu image**
 ```bash
@@ -44,7 +44,7 @@ docker images
 Deploy your Docker image, making sure to expose the necessary port.
 
 ```bash
-docker run -itd -p 8888:80 --name=my-docker-image --v=./:/usr/share/nginx/html/ my-docker-image:1.0
+docker run -itd -p 8888:80 --name=my-docker-image -v files:/usr/share/nginx/html/ my-docker-image:1.0
 ```
 
 7. Validate Application Use a web browser to check if the application are active and accessible.
