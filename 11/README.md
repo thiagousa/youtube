@@ -1,11 +1,5 @@
 # Create a container image in Docker (step by step) 🌟
 
-[![VIDEO NAME](#SCREENSHOT PICTURE)](YOUTUBE LINK)
-
-[Watch the Video](YOUTUBE LINK)
-
-# Creating Container Image on Docker
-
 "This project will show you how to easily make an Ubuntu Container using Docker."
 
 ## Requirements
@@ -31,7 +25,7 @@ cd youtube\11
 ```
 3. **Download the Ubuntu image**
 ```bash
-docker pull nginx:latest
+docker pull nginx:1.25.4-alpine-slim
 ```
 4. Create Docker Image
 Generate your application's Docker image
@@ -58,22 +52,13 @@ docker run -itd -p 8888:80 --name=my-docker-image --v=./:/usr/share/nginx/html/ 
 ```bash
 localhost:8888
 ```
-8. **Access the Docker Ubuntu Container**
-   ```bash
-   docker exec -it ubuntu bash 
-   ```
-9. **Open htop app**
-   ```bash
-   htop
-   ```
 
 10. **Delete the Ubuntu container**
    ```bash
    docker rm  my-docker-image --force
     ```
 
-11. Create Docker Image
-Generate your application's Docker image
+11.**Create Docker Image**
 
 ```bash
 docker build -t my-docker-image:2.0 .
@@ -85,15 +70,32 @@ docker build -t my-docker-image:2.0 .
 docker run -itd -p 8888:80 --name=my-docker-image my-docker-image:2.0
 ```
 
-13. Validate Application Use a web browser to check if the application are active and accessible.
+13. **Validate Application Use a web browser to check if the application are active and accessible.**
 
 ```bash
 localhost:8888
 ```
-14. **Delete the Ubuntu container**
-   ```bash
-   docker rm  my-docker-image --force
-    ```
+
+14. **Stop running container**
+```bash
+docker stop my-docker-image
+```
+
+15. **Start a stopped container**
+```bash
+docker start my-docker-image
+```
+
+16. **Remove a containerr**
+```bash
+docker rm my-docker-image
+```
+
+17. **Remove an image**
+```bash
+docker rmi my-docker-image
+```
+
 ## How to Contribute 🤝
 
 Contributions to this project are welcome! Whether you want to fix a bug, improve documentation, or add new features, please check out our [Contribution Guidelines](../CONTRIBUTING.md) to get started.
