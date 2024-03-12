@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: password-generator-app-ingress
+  annotations:
+    # Use this annotation if you're using Nginx Ingress Controller
+    # nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+  - host: password-generator.example.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: password-generator-app-service
+            port:
+              number: 80

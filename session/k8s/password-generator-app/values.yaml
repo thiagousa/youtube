@@ -1,0 +1,35 @@
+replicaCount: 3
+
+image:
+  repository: thiagousa/password-generator-app
+  tag: 2.4
+  pullPolicy: IfNotPresent
+
+service:
+  port: 3000
+
+resources:
+  limits:
+    cpu: "200m"
+    memory: "256Mi"
+  requests:
+    cpu: "100m"
+    memory: "128Mi"
+
+probes:
+  readinessProbe:
+    initialDelaySeconds: 5
+    periodSeconds: 10
+  livenessProbe:
+    initialDelaySeconds: 15
+    periodSeconds: 20
+
+configMapName: password-generator-app-config
+
+configMap:
+  PORT: "3000"
+  HEALTH: "/health"
+  LIVE: "/live"
+  METRICS: "/metrics"
+  LENGTH: "10"
+  GRACEFULL: "10000"

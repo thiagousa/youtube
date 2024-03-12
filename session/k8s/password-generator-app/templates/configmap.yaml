@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: password-generator-app-config
+  labels:
+    app: password-generator-app
+data:
+  PORT: "3000"
+  HEALTH: "/health"
+  LIVE: "/live"
+  METRICS: "/metrics"
+  LENGTH: "10"
+  GRACEFULL: "10000"

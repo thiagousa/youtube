@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: password-generator-app-deployment
+  labels:
+    app: password-generator-app
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: password-generator-app
+  template:
+    metadata:
+      labels:
+        app: password-generator-app
+    spec:
+      containers:
+      - name: password-generator-app
+        image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
+        ports:
+        - containerPort: {{ .Values.service.port }}
+        envFrom:
+        - configMapRef:
+            name: {{ .Values.configMapName }}
+        resources:
+          requests:
+            memory: {{ .Values.resources.requests.memory }}
+            cpu: {{ .Values.resources.requests.cpu }}
+          limits:
+            memory: {{ .Values.resources.limits.memory }}
+            cpu: {{ .Values.resources.limits.cpu }}
+        readinessProbe:
+          httpGet:
+            path: /health
+            port: {{ .Values.service.port }}
+          initialDelaySeconds: {{ .Values.probes.readinessProbe.initialDelaySeconds }}
+          periodSeconds: {{ .Values.probes.readinessProbe.periodSeconds }}
+        livenessProbe:
+          httpGet:
+            path: /live
+            port: {{ .Values.service.port }}
+          initialDelaySeconds: {{ .Values.probes.livenessProbe.initialDelaySeconds }}
+          periodSeconds: {{ .Values.probes.livenessProbe.periodSeconds }}
