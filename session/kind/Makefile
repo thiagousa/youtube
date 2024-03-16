@@ -19,8 +19,8 @@ install-cert-manager:
 
 # Delete kube-prometheus
 delete-kube-prometheus:
-	kubectl delete --ignore-not-found=true -f https://raw.githubusercontent.com/prometheus-operator/kube-prometheus/main/manifests/
-	kubectl delete --ignore-not-found=true -f https://raw.githubusercontent.com/prometheus-operator/kube-prometheus/main/manifests/setup
+	kubectl delete --ignore-not-found=true -f  monitoring/kube-prometheus/manifests/
+	kubectl delete --ignore-not-found=true -f  monitoring/kube-prometheus/manifests/setup/
 
 # Combine all install commands
 install-all: install-ingress-nginx install-cert-manager install-kube-prometheus
@@ -28,12 +28,23 @@ install-all: install-ingress-nginx install-cert-manager install-kube-prometheus
 # Clean up everything
 clean: delete-kube-prometheus delete-cluster
 
-# Install kube-prometheus
+# Install Monitoring
 install-kube-prometheus:
+	kubectl apply --server-side -f monitoring/kube-prometheus/manifests/setup/
+	kubectl wait \
+	--for condition=Established \
+	--all CustomResourceDefinition \
+	--namespace=monitoring
+	kubectl apply --server-side -f  monitoring/kube-prometheus/manifests/
 
-    k create ns monitoring    
-	helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
-	helm repo update
-	helm install prometheus-stack prometheus-community/kube-prometheus-stack
+# Port Forward Grafana 
+grafana:
+	kubectl port-forward -n monitoring svc/grafana 3030:3000
 
-.PHONY: default create-cluster delete-cluster install-ingress-nginx install-cert-manager install-kube-prometheus delete-kube-prometheus install-all clean install-kube-prometheus
+prometheus:
+	kubectl port-forward -n monitoring svc/prometheus-k8s 9090
+
+install-app:
+	helm install password-generator-app ../k8s/password-generator-app/ 
+
+.PHONY: default create-cluster delete-cluster install-ingress-nginx install-cert-manager install-kube-prometheus delete-kube-prometheus install-all clean install-monitoring grafana prometheus install-app
