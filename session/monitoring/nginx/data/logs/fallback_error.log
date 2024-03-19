@@ -1,0 +1,4 @@
+2023/01/24 14:28:56 [alert] 348#348: *4582 open socket #3 left in connection 8
+2023/01/24 14:28:56 [alert] 348#348: *4584 open socket #16 left in connection 10
+2023/01/24 14:28:56 [alert] 348#348: aborting
+2024/03/19 00:12:23 [error] 192#192: *13 connect() failed (111: Connection refused) while connecting to upstream, client: 172.19.0.1, server: nginxproxymanager, request: "GET /api/ HTTP/1.1", upstream: "http://127.0.0.1:3000/", host: "nginx.acme.net", referrer: "http://nginx.acme.net/"
