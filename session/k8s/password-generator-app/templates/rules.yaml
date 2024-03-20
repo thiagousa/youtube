@@ -1,0 +1,18 @@
+apiVersion: monitoring.coreos.com/v1
+kind: PrometheusRule
+metadata:
+  name: password-generator-app-rule
+  labels:
+    app: password-generator-app
+spec:
+  groups:
+  - name: latency-rules
+    rules:
+    - alert: LatencyMyAPP
+      expr: increase(app_request_latency_seconds[1m]) > 0.4
+      for: 1m
+      labels:
+        severity: critical
+      annotations:
+        summary: High latency detected for My APP
+        description: "Latency My APP has exceeded 0.4s over the last minute"

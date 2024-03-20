@@ -1,0 +1,35 @@
+apiVersion: monitoring.coreos.com/v1alpha1
+kind: AlertmanagerConfig
+metadata:
+  name: telegram-alertmanager-config
+  labels:
+    alertmanagerConfig: example
+spec:
+  route:
+    groupBy: ['alertname']
+    groupWait: 30s
+    groupInterval: 5m
+    repeatInterval: 12h
+    receiver: 'telegram-receiver'
+  receivers:
+  - name: 'telegram-receiver'
+    webhookConfigs:
+    - url: 'https://api.telegram.org/bot5892160007:AAF4KoBZQI1_SFI5N5hQjEobmvcEyt7GfLA/sendMessage'
+      httpConfig:
+        bearerToken:
+          key: bot_token
+          name: telegram-secret
+      sendResolved: true
+      maxAlerts: 10
+      httpConfig:
+        basicAuth:
+          password:
+            name: telegram-secret
+            key: bot_token
+  - name: 'null'
+  route:
+    receiver: 'null'
+    routes:
+    - match:
+        alertname: Watchdog
+      receiver: 'null'

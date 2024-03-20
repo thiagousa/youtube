@@ -47,4 +47,19 @@ prometheus:
 install-app:
 	helm install password-generator-app ../k8s/password-generator-app/ 
 
-.PHONY: default create-cluster delete-cluster install-ingress-nginx install-cert-manager install-kube-prometheus delete-kube-prometheus install-all clean install-monitoring grafana prometheus install-app
+upgrade-app:
+	helm upgrade password-generator-app ../k8s/password-generator-app/ 
+
+diff-app:
+	helm diff upgrade password-generator-app ../k8s/password-generator-app/ 	
+
+monitoring-up:
+	docker compose  -f ../monitoring/docker-compose.yaml up -d 
+    
+monitoring-down:
+	docker compose  -f ../monitoring/docker-compose.yaml down
+
+labels-service-monitoring:
+	kubectl get prometheus -n monitoring -o yaml | grep -i serviceMonitor -A3	
+
+.PHONY: default create-cluster delete-cluster install-ingress-nginx install-cert-manager install-kube-prometheus delete-kube-prometheus install-all clean install-monitoring grafana prometheus install-app upgrade-app monitoring-up monitoring-down labels-service-monitoring
