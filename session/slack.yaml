@@ -68,7 +68,7 @@ receivers:
 
             channel: '#alerts-dev'
 
-            api_url: 'https://hooks.slack.com/services/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'
+            api_url: 'https://hooks.slack.com/'
 
             title: |-
 
