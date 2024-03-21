@@ -1,0 +1,15 @@
+[2024-03-21 01:14:32] local.DEBUG: Get app triggered for: f036f579066ad71bd653f5a6418dbede5b500370  
+[2024-03-21 01:14:32] local.DEBUG: Download triggered for stdClass Object
+(
+    [appid] => f036f579066ad71bd653f5a6418dbede5b500370
+    [name] => Cloudflare
+    [website] => https://dash.cloudflare.com/
+    [license] => Commercial
+    [description] => Cloudflare DNS is an enterprise-grade authoritative DNS service that offers the fastest response time, unparalleled redundancy, and advanced security with built-in DDoS mitigation and DNSSEC.
+    [enhanced] => 
+    [tile_background] => dark
+    [icon] => cloudflare.svg
+    [sha] => 4434f47ff1dccfa9b935a68e7485a10171f5c4e5
+    [class] => App\SupportedApps\Cloudflare\Cloudflare
+)
+  
