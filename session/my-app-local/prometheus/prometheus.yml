@@ -35,6 +35,6 @@ scrape_configs:
     static_configs:
       - targets: ["alertmanager:9093"]
 
-  - job_name: "my-app"
-    static_configs:
-      - targets: ["my-app:3000"]
+  # - job_name: "my-app"
+  #   static_configs:
+  #     - targets: ["my-app:3000"]

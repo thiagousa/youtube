@@ -71,13 +71,13 @@ groups:
       summary: Host unusual disk write rate (instance {{ $labels.instance }})
       description: Disk is probably writing too much data (> 50 MB/s)\n  VALUE = {{ $value }}
 
-  - alert: Latency My APP
-    expr: increase(app_request_latency_seconds[1m])> 0.4
-    for: 1m
-    labels:
-      severity: critical
-    annotations:
-      summary: Latency My APP
-      description: Latency My APP
+  # - alert: Latency My APP
+  #   expr: increase(app_request_latency_seconds[1m])> 0.4
+  #   for: 1m
+  #   labels:
+  #     severity: critical
+  #   annotations:
+  #     summary: Latency My APP
+  #     description: Latency My APP
 
 

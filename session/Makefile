@@ -5,19 +5,18 @@ default: create-cluster
 1-monitoring-up:
 	docker compose  -f my-app-local/docker-compose.yaml up -d 
     
-2-monitoring-down:
-	docker compose  -f my-app-local/docker-compose.yaml down
-
-3-service-down:
+2-service-down:
 	docker rm --force foobar-exporter
 
 #My App - Containerizing
-4-monitoring-down:
+3-monitoring-down:
 	docker compose  -f my-app-local/docker-compose.yaml down
 
-5-monitoring-up:
+4-monitoring-up:
 	docker compose  -f my-app-local/docker-compose.yaml up -d 
 
+5-monitoring-down:
+	docker compose  -f my-app-local/docker-compose.yaml down
 # Create a Kind cluster with 1 control plane and 2 worker nodes
 1-create-cluster:
 	kind create cluster --name monitoring --config kind/kind-config.yaml
@@ -62,4 +61,4 @@ default: create-cluster
 11-delete-cluster:
 	kind delete cluster --name monitoring
 
-.PHONY: default 1-monitoring-up 2-monitoring-down 3-service-down 4-monitoring-down 5-monitoring-up 1-create-cluster 2-install-kube-prometheus 3-grafana 4-prometheus 5-alertmanager 6-install-app 7-upgrade-app 8-diff-app 9-labels-service-monitoring 10-delete-kube-prometheus 11-delete-cluster
+.PHONY: default 1-monitoring-up 2-service-down 3-monitoring-down 4-monitoring-up 5-monitoring-down 1-create-cluster 2-install-kube-prometheus 3-grafana 4-prometheus 5-alertmanager 6-install-app 7-upgrade-app 8-diff-app 9-labels-service-monitoring 10-delete-kube-prometheus 11-delete-cluster
