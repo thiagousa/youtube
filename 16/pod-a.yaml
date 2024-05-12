@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: pod-a
+  name: pod-a
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: pod-a
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: pod-a
+    spec:
+      containers:
+      - image: thiagousa/right:latest
+        name: right
+        resources: {}

@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: pod-b
+  name: pod-b
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: pod-b
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: pod-b
+    spec:
+    ### Add the Toleration here
+      tolerations:
+      - key: "gpu"
+        operator: "Equal"
+        value: "yes"
+        effect: "NoSchedule"
+      containers:
+      - image: thiagousa/right:latest
+        name: right
