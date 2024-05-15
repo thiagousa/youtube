@@ -5,7 +5,7 @@ default: build
 build:
 	docker build . -t app:latest
 run:
-	docker run -itd --name=app app:latest
+	docker run -itd --privileged --name=app app:latest
 
 exec:
 	docker exec -it app sh
