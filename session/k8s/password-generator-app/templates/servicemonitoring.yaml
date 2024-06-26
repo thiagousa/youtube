@@ -4,11 +4,14 @@ metadata:
   name: password-generator-app-service-monitoring
   labels:
     app: password-generator-app
+    app.kubernetes.io/instance: kube-prometheus
+    release: kube-prometheus
 spec:
   selector:
     matchLabels:
       app: password-generator-app
       app.kubernetes.io/instance: kube-prometheus
+      release: kube-prometheus
   endpoints:
   - port: metrics
     path: "/metrics"
