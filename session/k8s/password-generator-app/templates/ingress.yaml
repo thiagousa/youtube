@@ -1,13 +1,18 @@
+---
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: password-generator-app-ingress
+  name: password
   annotations:
-    # Use this annotation if you're using Nginx Ingress Controller
-    # nginx.ingress.kubernetes.io/rewrite-target: /
+    nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
+  ingressClassName: nginx
+  tls:
+  - hosts:
+      - password-generator.dossantosteam.com
+    secretName: passswordcert
   rules:
-  - host: password-generator.example.com
+  - host: "password-generator.dossantosteam.com"  
     http:
       paths:
       - path: /
@@ -17,3 +22,17 @@ spec:
             name: password-generator-app-service
             port:
               number: 80
+              
+---
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: passswordcert
+  namespace: default
+spec:
+  secretName: passswordcert
+  issuerRef:
+    name: acme-issuer
+    kind: ClusterIssuer
+  dnsNames:
+    - password-generator.dossantosteam.com
