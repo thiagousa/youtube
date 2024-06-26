@@ -21,7 +21,7 @@ spec:
           service:
             name: password-generator-app-service
             port:
-              number: 80
+              number: 3000
               
 ---
 apiVersion: cert-manager.io/v1
