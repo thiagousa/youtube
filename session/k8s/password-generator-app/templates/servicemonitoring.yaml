@@ -8,6 +8,7 @@ spec:
   selector:
     matchLabels:
       app: password-generator-app
+      app.kubernetes.io/instance: kube-prometheus
   endpoints:
   - port: metrics
     path: "/metrics"
