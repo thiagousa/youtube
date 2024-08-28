@@ -4,7 +4,7 @@
 config:
   target: 'http://localhost:3000'
   phases:
-    - duration: 100 # Test duration in seconds
+    - duration: 30 # Test duration in seconds
       arrivalRate: 100 # Number of new virtual users per second
 scenarios:
   - flow:
