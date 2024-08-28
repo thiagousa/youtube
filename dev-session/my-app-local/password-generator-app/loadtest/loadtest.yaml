@@ -1,0 +1,12 @@
+#npm install -g artillery
+#artillery run loadtest.yaml
+
+config:
+  target: 'http://localhost:3000'
+  phases:
+    - duration: 100 # Test duration in seconds
+      arrivalRate: 100 # Number of new virtual users per second
+scenarios:
+  - flow:
+    - get:
+        url: "/app/generate-password?length=12&numbers=true&symbols=true"
