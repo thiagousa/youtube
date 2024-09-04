@@ -47,7 +47,6 @@ spec:
         app.kubernetes.io/version: "latest"
         app.kubernetes.io/managed-by: Helm
     spec:
-      serviceAccountName: default
       securityContext:
         {}
       containers:
@@ -62,15 +61,15 @@ spec:
               protocol: TCP
           livenessProbe:
             httpGet:
-              path: /
+              path: /live
               port: http
           readinessProbe:
             httpGet:
-              path: /
+              path: /health
               port: http
           resources:
             limits:
-              cpu: 100m
+              cpu: 200m
               memory: 128Mi
             requests:
               cpu: 100m

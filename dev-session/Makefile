@@ -1,9 +1,56 @@
-# Default target
+# Define the commands and packages
+BREW := /usr/local/bin/brew
+HELM := /usr/local/bin/helm
+GCLOUD := /usr/local/bin/gcloud
+GIT := /usr/bin/git
+KUBECTL := /usr/local/bin/kubectl
+
 all: install
 
-# Install helm and kubectl
-install:
-	brew install helm kubectl
+install: install_brew install_git install_helm install_gcloud install_kubectl
+
+install_brew:
+	@if ! command -v brew >/dev/null 2>&1; then \
+		echo "Homebrew not found. Installing..."; \
+		/bin/bash -c "$$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"; \
+	else \
+		echo "Homebrew is already installed."; \
+	fi
+
+install_git:
+	@if ! command -v git >/dev/null 2>&1; then \
+		echo "Git not found. Installing..."; \
+		$(BREW) install git; \
+	else \
+		echo "Git is already installed."; \
+	fi
+
+install_helm:
+	@if ! command -v helm >/dev/null 2>&1; then \
+		echo "Helm not found. Installing..."; \
+		$(BREW) install helm; \
+	else \
+		echo "Helm is already installed."; \
+	fi
+
+install_gcloud:
+	@if ! command -v gcloud >/dev/null 2>&1; then \
+		echo "Google Cloud SDK not found. Installing..."; \
+		$(BREW) install --cask google-cloud-sdk; \
+	else \
+		echo "Google Cloud SDK is already installed."; \
+	fi
+
+install_kubectl:
+	@if ! command -v kubectl >/dev/null 2>&1; then \
+		echo "kubectl not found. Installing..."; \
+		$(BREW) install kubectl; \
+	else \
+		echo "kubectl is already installed."; \
+	fi
+
+run-app:
+	cd my-app-local/password-generator-app && npm install && npm start
 
 docker-build:
 	docker buildx build  --platform linux/amd64 -t thiagousa/password-generator-app:latest my-app-local/password-generator-app
@@ -57,7 +104,7 @@ gcloud-login:
 	gcloud auth login
 
 gcloud-config:
-	gcloud config set project id-project
+	gcloud config set project st-hd-pla-platform
 
 gcloud-check-project:
 	gcloud config get-value project
@@ -70,5 +117,5 @@ cloud-deploy:
 
 cloud-delete:
 	gcloud run services delete password-generator-app --platform managed --region us-central1
-	
-.PHONY: all install build run check remove
+
+.PHONY: all install install_brew install_git install_helm install_gcloud install_kubectl run-app docker-build docker-run docker-check docker-logs docker-remove docker-push docker-pull load-test-install load-test-start kubernetes-context kubernetes-select helm-create helm-install helm-deploy kubernetes-check kubernetes-forward gcloud-login gcloud-config gcloud-check-project cloud-build cloud-deploy cloud-delete
