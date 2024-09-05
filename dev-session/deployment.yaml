@@ -1,0 +1,76 @@
+---
+# Source: password-generator-app/templates/service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: password-generator-app
+  labels:
+    helm.sh/chart: password-generator-app-0.1.0
+    app.kubernetes.io/name: password-generator-app
+    app.kubernetes.io/instance: password-generator-app
+    app.kubernetes.io/version: "latest"
+    app.kubernetes.io/managed-by: Helm
+spec:
+  type: ClusterIP
+  ports:
+    - port: 3000
+      targetPort: http
+      protocol: TCP
+      name: http
+  selector:
+    app.kubernetes.io/name: password-generator-app
+    app.kubernetes.io/instance: password-generator-app
+---
+# Source: password-generator-app/templates/deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: password-generator-app
+  labels:
+    helm.sh/chart: password-generator-app-0.1.0
+    app.kubernetes.io/name: password-generator-app
+    app.kubernetes.io/instance: password-generator-app
+    app.kubernetes.io/version: "latest"
+    app.kubernetes.io/managed-by: Helm
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: password-generator-app
+      app.kubernetes.io/instance: password-generator-app
+  template:
+    metadata:
+      labels:
+        helm.sh/chart: password-generator-app-0.1.0
+        app.kubernetes.io/name: password-generator-app
+        app.kubernetes.io/instance: password-generator-app
+        app.kubernetes.io/version: "latest"
+        app.kubernetes.io/managed-by: Helm
+    spec:
+      securityContext:
+        {}
+      containers:
+        - name: password-generator-app
+          securityContext:
+            {}
+          image: "thiagousa/password-generator-app:latest"
+          imagePullPolicy: IfNotPresent
+          ports:
+            - name: http
+              containerPort: 3000
+              protocol: TCP
+          livenessProbe:
+            httpGet:
+              path: /live
+              port: http
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: http
+          resources:
+            limits:
+              cpu: 200m
+              memory: 128Mi
+            requests:
+              cpu: 100m
+              memory: 128Mi

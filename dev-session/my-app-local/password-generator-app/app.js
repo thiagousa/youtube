@@ -32,6 +32,7 @@ app.get(process.env.HEALTH, (req, res) => {
 
   if (isAppReady) {
     res.json({ status: 'UP', message: 'App is ready to receive requests.' });
+    console.log(`HEALTH`);
   } else {
     // Respond with a 503 Service Unavailable status code to indicate the app is not ready
     res.status(503).json({ status: 'DOWN', message: 'App is not ready to receive requests.' });
