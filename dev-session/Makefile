@@ -4,10 +4,11 @@ HELM := /usr/local/bin/helm
 GCLOUD := /usr/local/bin/gcloud
 GIT := /usr/bin/git
 KUBECTL := /usr/local/bin/kubectl
+NPM := /usr/local/bin/npm
 
 all: install
 
-install: install_brew install_git install_helm install_gcloud install_kubectl
+install: install_brew install_git install_helm install_gcloud install_kubectl install_npm
 
 install_brew:
 	@if ! command -v brew >/dev/null 2>&1; then \
@@ -47,6 +48,14 @@ install_kubectl:
 		$(BREW) install kubectl; \
 	else \
 		echo "kubectl is already installed."; \
+	fi
+
+install_npm:
+	@if ! command -v npm >/dev/null 2>&1; then \
+		echo "npm not found. Installing..."; \
+		$(BREW) install npm; \
+	else \
+		echo "npm is already installed."; \
 	fi
 
 run-app:
