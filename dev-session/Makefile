@@ -59,7 +59,11 @@ install_npm:
 	fi
 
 run-app:
-	cd my-app-local/password-generator-app && mv data .env && npm install && npm start
+	cd my-app-local/password-generator-app && \
+	if [ ! -f .env ]; then \
+		mv data .env; \
+	fi && \
+	npm install && npm start
 
 docker-build:
 	docker buildx build  --platform linux/amd64 -t thiagousa/password-generator-app:latest my-app-local/password-generator-app
