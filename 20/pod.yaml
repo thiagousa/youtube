@@ -1,0 +1,32 @@
+# This is a Kubernetes Pod configuration file
+
+# The API version for this Kubernetes resource
+# v1 is the stable version for many core Kubernetes resources
+apiVersion: v1
+
+# The type of Kubernetes resource we're defining
+# In this case, we're creating a Pod
+kind: Pod
+
+# Metadata contains information about the Pod
+metadata:
+  # The name of the Pod
+  # This is how you'll refer to the Pod in Kubernetes commands
+  name: nginx
+
+# The specification of the desired state for the Pod
+spec:
+  # List of containers to run in the Pod
+  containers:
+  # Each item in this list defines a container
+  - # The Docker image to use for this container
+    # Here we're using the latest version of the official nginx image
+    image: nginx:latest
+    
+    # The name of the container within the Pod
+    # This name can be used to refer to this specific container
+    name: nginx
+
+# Note: This Pod configuration creates a single nginx container.
+# It doesn't specify any resource limits, volume mounts, or ports.
+# For a production environment, you might want to add these specifications.
