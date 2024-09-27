@@ -1,0 +1,50 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: memory
+  labels:
+    app: memory
+spec:
+  type: ClusterIP
+  selector:
+    app: memory
+  ports:
+    - protocol: TCP
+      name: http
+      port: 80
+      targetPort: 80
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: memory
+  labels:
+    app: memory
+spec:
+  selector:
+    matchLabels:
+      app: memory
+  replicas: 1
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+  template:
+    metadata:
+      labels:
+        app: memory
+    spec:
+      containers:
+      - name: memory
+        image: thiagousa/memory:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
+        resources:
+          requests:
+            memory: "50Mi"
+            cpu: "500m"
+          limits:
+            memory: "500Mi"
+            cpu: "2000m"
