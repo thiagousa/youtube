@@ -102,7 +102,7 @@ helm-create:
 	helm create my-app-local/password-generator-app-helm
 
 helm-install:
-	helm install password-generator-app my-app-local/password-generator-app	
+	helm install password-generator-app password-generator-app	
 
 helm-deploy:
 	helm template password-generator-app password-generator-app > deployment.yaml
