@@ -1,0 +1,11 @@
+# Example Environment 
+ENV="dev"
+
+#Endpoint to show 
+LIVE="/live"
+
+# Endpoint to check if the app is ready
+HEALTH="/health"
+
+#Endpoint for metrics
+METRICS="/metrics"
