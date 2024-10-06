@@ -38,6 +38,8 @@ spec:
           memory: 128Mi
       # Inject environment variables from ConfigMap
       env:
+        - name: POD
+          value: Test
         - name: ENV
           valueFrom:
             configMapKeyRef:
