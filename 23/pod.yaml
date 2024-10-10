@@ -1,0 +1,58 @@
+---
+apiVersion: v1  # Specifies the API version for Kubernetes objects
+kind: Pod  # Defines the kind of resource; in this case, a Pod
+metadata:
+  name: password-generator-app  # Name of the Pod
+  labels:  # Labels for organizing and selecting the Pod
+    app.kubernetes.io/name: password-generator-app
+    app.kubernetes.io/instance: password-generator-app
+    app.kubernetes.io/version: "latest"
+    app.kubernetes.io/managed-by: Helm  # Indicates that this Pod is managed by Helm
+spec:
+  securityContext:  # Security context for the Pod (currently empty)
+    {}
+  containers:  # List of containers in the Pod
+    - name: password-generator-app  # Name of the container
+      securityContext:  # Security context for the container (currently empty)
+        {}
+      image: "thiagousa/password-generator-app:2.4"  # Image used for the container
+      imagePullPolicy: IfNotPresent  # Pull the image only if it's not already present
+      ports:  # List of ports to expose from the container
+        - name: http  # Name of the port
+          containerPort: 3000  # Port number that the container listens on
+          protocol: TCP  # Protocol used for the port
+      livenessProbe:  # Probe to check if the container is alive
+        httpGet:  # HTTP GET request for the liveness check
+          path: /live  # Path to check
+          port: http  # Port to use for the check
+      readinessProbe:  # Probe to check if the container is ready to accept traffic
+        httpGet:  # HTTP GET request for the readiness check
+          path: /health  # Path to check
+          port: http  # Port to use for the check
+      resources:  # Resource requests and limits for the container
+        limits:
+          cpu: 200m  # Maximum CPU usage allowed
+          memory: 128Mi  # Maximum memory usage allowed
+        requests:
+          cpu: 100m  # Minimum CPU guaranteed to the container
+          memory: 128Mi  # Minimum memory guaranteed to the container
+     
+     ##ENV
+
+      env:  # Environment variables for the container
+        - name: secret  # Name of the environment variable
+          valueFrom:  # Source of the value for the environment variable
+            secretKeyRef:  # Reference to a key in a Kubernetes Secret
+              name: password  # Name of the Secret
+              key: password  # Key within the Secret
+      
+      ###FILE
+      volumeMounts:  # Mount points for volumes in the container
+        - name: secret-volume  # Name of the volume to mount
+          mountPath: config/config.json  # Path where the volume will be mounted
+          subPath: config.json  # File within the volume to mount
+          
+  volumes:  # List of volumes available to the Pod
+    - name: secret-volume  # Name of the volume
+      secret:  # Type of volume being used
+        secretName: password  # Name of the Secret from which to create the volume

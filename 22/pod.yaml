@@ -15,7 +15,7 @@ spec:
     - name: password-generator-app
       securityContext:
         {}
-      image: "thiagousa/password-generator-app:latest"
+      image: "thiagousa/password-generator-app:2.4"
       imagePullPolicy: IfNotPresent
       ports:
         - name: http
