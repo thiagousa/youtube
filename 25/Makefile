@@ -23,9 +23,9 @@ create-deployment:
 apply-deployment:
 	kubectl apply -f deployment.yaml
 
-# Reapply the deployment configuration to update or check the status of resources
-check-deployment:
-	kubectl apply -f deployment.yaml
+# list deployment
+list-deployment:
+	kubectl get deployment
 
 
 # Service Creation
@@ -50,7 +50,7 @@ apply-svc:
 	kubectl apply -f clusterip.yaml && kubectl apply -f node-port.yaml && kubectl apply -f load-balancer.yaml
 
 # Check the status of all services in the cluster
-check-svc:	
+list-svc:	
 	kubectl get svc	
 
 # Port Forwarding
