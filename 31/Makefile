@@ -8,7 +8,7 @@ DISK_SIZE=50G
 BRIDGE=vmbr0
 
 # Default target
-all: prepare_vm create_template
+all: prepare_dir download_image customize_image create_vm import_disk configure_vm resize_disk create_template
 
 # Step 1: Create 'chat' directory and change to it
 prepare_dir:
