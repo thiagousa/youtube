@@ -1,3 +1,7 @@
+#Requeriments	
+#sudo apt-get install -y make
+
+
 # Define variables
 VM_ID=6000
 VM_NAME=ubuntu-24-04-cloud-init-template
@@ -37,9 +41,13 @@ all: 0_install_tools 1_prepare_dir 2_download_image 3_customize_image 4_create_v
 # Step 6: Configure the VM disk and boot settings
 6_configure_vm: 5_import_disk
 	qm set $(VM_ID) --scsihw virtio-scsi-pci --scsi0 $(STORAGE):$(VM_ID)/vm-$(VM_ID)-disk-0.raw
+# To enable to use this VM 
 	qm set $(VM_ID) --ide2 $(STORAGE):cloudinit
+# To enable to use boot on this disk 
 	qm set $(VM_ID) --boot c --bootdisk scsi0
+# to select the serial console - monitor	
 	qm set $(VM_ID) --serial0 socket --vga serial0
+# to enable the guest agent	
 	qm set $(VM_ID) --agent enabled=1
 
 # Step 7: Resize the VM disk
