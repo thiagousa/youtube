@@ -1,5 +1,5 @@
 # Define variables
-VM_ID=1000
+VM_ID=9000
 VM_NAME=ubuntu-2404-cloud-init
 IMAGE_URL=https://cloud-images.ubuntu.com/noble/current/noble-server-cloudimg-amd64.img
 IMAGE_NAME=noble-server-cloudimg-amd64.img
