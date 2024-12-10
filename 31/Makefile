@@ -12,7 +12,7 @@ DISK_SIZE=50G
 BRIDGE=vmbr0
 
 # Default target
-all: 0_install_tools 1_prepare_dir 2_download_image 3_customize_image 4_create_vm 5_import_disk 6_configure_vm 7_resize_disk 9_create_template
+all: 0_install_tools 1_prepare_dir 2_download_image 3_customize_image 4_create_vm 5_import_disk 6_configure_vm 7_resize_disk 8_create_template
 
 # Step 0: Install required tools
 0_install_tools:
@@ -54,17 +54,13 @@ all: 0_install_tools 1_prepare_dir 2_download_image 3_customize_image 4_create_v
 7_resize_disk: 6_configure_vm
 	qm disk resize $(VM_ID) scsi0 +$(DISK_SIZE)
 
-# Step 8: Exit the shell (for manual process simulation)
-8_exit_shell:
-	exit
-
-# Step 9: Convert VM to a template
-9_create_template: 7_resize_disk
+# Step 8: Convert VM to a template
+8_create_template: 7_resize_disk
 	qm template $(VM_ID)
 
 # Clean up (optional)
-10_clean:
+9_clean:
 	rm -rf template
 
 # Declare targets as phony
-.PHONY: all 0_install_tools 1_prepare_dir 2_download_image 3_customize_image 4_create_vm 5_import_disk 6_configure_vm 7_resize_disk 8_exit_shell 9_create_template 10_clean
+.PHONY: all 0_install_tools 1_prepare_dir 2_download_image 3_customize_image 4_create_vm 5_import_disk 6_configure_vm 7_resize_disk 8_create_template 9_clean
