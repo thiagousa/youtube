@@ -1,7 +1,3 @@
-## REQURIEMNTS
-# apt install libguestfs-tools -y
-# apt install make -y
-
 # Define variables
 VM_ID=6000
 VM_NAME=ubuntu-24-04-cloud-init-template
@@ -12,9 +8,13 @@ DISK_SIZE=50G
 BRIDGE=vmbr0
 
 # Default target
-all: 1_prepare_dir 2_download_image 3_customize_image 4_create_vm 5_import_disk 6_configure_vm 7_resize_disk 9_create_template
+all: 0_install_tools 1_prepare_dir 2_download_image 3_customize_image 4_create_vm 5_import_disk 6_configure_vm 7_resize_disk 9_create_template
 
-# Step 1: Create 'template' directory
+# Step 0: Install required tools
+0_install_tools:
+	apt install libguestfs-tools -y
+
+# Step 1: Create 'chat' directory
 1_prepare_dir:
 	mkdir -p template
 
@@ -59,4 +59,4 @@ all: 1_prepare_dir 2_download_image 3_customize_image 4_create_vm 5_import_disk 
 	rm -rf template
 
 # Declare targets as phony
-.PHONY: all 1_prepare_dir 2_download_image 3_customize_image 4_create_vm 5_import_disk 6_configure_vm 7_resize_disk 8_exit_shell 9_create_template 10_clean
+.PHONY: all 0_install_tools 1_prepare_dir 2_download_image 3_customize_image 4_create_vm 5_import_disk 6_configure_vm 7_resize_disk 8_exit_shell 9_create_template 10_clean
