@@ -8,30 +8,30 @@ DISK_SIZE=50G
 BRIDGE=vmbr0
 
 # Default target
-all: 1-prepare_dir 2-download_image 3-customize_image 4-create_vm 5-import_disk 6-configure_vm 7-resize_disk 9-create_template
-# Step 1: Create 'chat' directory and change to it
+all: 1_prepare_dir 2_download_image 3_customize_image 4_create_vm 5_import_disk 6_configure_vm 7_resize_disk 9_create_template
+
+# Step 1: Create 'template' directory
 1_prepare_dir:
 	mkdir -p template
-	cd template
 
 # Step 2: Download Ubuntu Cloud Image
-2_download_image: prepare_dir
+2_download_image: 1_prepare_dir
 	cd template && wget $(IMAGE_URL)
 
 # Step 3: Add QEMU guest agent to the image
-3_customize_image: download_image
+3_customize_image: 2_download_image
 	cd template && virt-customize --add $(IMAGE_NAME) --install qemu-guest-agent
 
 # Step 4: Create a new Proxmox VM
-4_create_vm: customize_image
+4_create_vm: 3_customize_image
 	qm create $(VM_ID) --name $(VM_NAME) --numa 0 --ostype l26 --cpu cputype=host --cores 4 --sockets 2 --memory 6144 --net0 virtio,bridge=$(BRIDGE)
 
 # Step 5: Import the cloud image as a disk
-5_import_disk: create_vm
+5_import_disk: 4_create_vm
 	cd template && qm importdisk $(VM_ID) $(IMAGE_NAME) $(STORAGE)
 
 # Step 6: Configure the VM disk and boot settings
-6_configure_vm: import_disk
+6_configure_vm: 5_import_disk
 	qm set $(VM_ID) --scsihw virtio-scsi-pci --scsi0 $(STORAGE):$(VM_ID)/vm-$(VM_ID)-disk-0.raw
 	qm set $(VM_ID) --ide2 $(STORAGE):cloudinit
 	qm set $(VM_ID) --boot c --bootdisk scsi0
@@ -39,7 +39,7 @@ all: 1-prepare_dir 2-download_image 3-customize_image 4-create_vm 5-import_disk 
 	qm set $(VM_ID) --agent enabled=1
 
 # Step 7: Resize the VM disk
-7_resize_disk: configure_vm
+7_resize_disk: 6_configure_vm
 	qm disk resize $(VM_ID) scsi0 +$(DISK_SIZE)
 
 # Step 8: Exit the shell (for manual process simulation)
@@ -47,9 +47,9 @@ all: 1-prepare_dir 2-download_image 3-customize_image 4-create_vm 5-import_disk 
 	exit
 
 # Step 9: Convert VM to a template
-9_create_template: resize_disk
+9_create_template: 7_resize_disk
 	qm template $(VM_ID)
 
 # Clean up (optional)
 10_clean:
-	rm -rf chat
+	rm -rf template
