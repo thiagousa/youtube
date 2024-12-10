@@ -1,3 +1,7 @@
+## REQURIEMNTS
+# apt install libguestfs-tools -y
+# apt install make -y
+
 # Define variables
 VM_ID=6000
 VM_NAME=ubuntu-24-04-cloud-init-template
