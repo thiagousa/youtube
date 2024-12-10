@@ -12,16 +12,16 @@ all: prepare_dir download_image customize_image create_vm import_disk configure_
 
 # Step 1: Create 'chat' directory and change to it
 prepare_dir:
-	mkdir -p chat
-	cd chat
+	mkdir -p template
+	cd template
 
 # Step 2: Download Ubuntu Cloud Image
 download_image: prepare_dir
-	cd chat && wget $(IMAGE_URL)
+	cd template && wget $(IMAGE_URL)
 
 # Step 3: Add QEMU guest agent to the image
 customize_image: download_image
-	cd chat && virt-customize --add $(IMAGE_NAME) --install qemu-guest-agent
+	cd template && virt-customize --add $(IMAGE_NAME) --install qemu-guest-agent
 
 # Step 4: Create a new Proxmox VM
 create_vm: customize_image
@@ -29,7 +29,7 @@ create_vm: customize_image
 
 # Step 5: Import the cloud image as a disk
 import_disk: create_vm
-	cd chat && qm importdisk $(VM_ID) $(IMAGE_NAME) $(STORAGE)
+	cd template && qm importdisk $(VM_ID) $(IMAGE_NAME) $(STORAGE)
 
 # Step 6: Configure the VM disk and boot settings
 configure_vm: import_disk
@@ -53,4 +53,4 @@ create_template: resize_disk
 
 # Clean up (optional)
 clean:
-	rm -rf chat
+	rm -rf template
