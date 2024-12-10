@@ -53,3 +53,6 @@ all: 1_prepare_dir 2_download_image 3_customize_image 4_create_vm 5_import_disk 
 # Clean up (optional)
 10_clean:
 	rm -rf template
+
+# Declare targets as phony
+.PHONY: all 1_prepare_dir 2_download_image 3_customize_image 4_create_vm 5_import_disk 6_configure_vm 7_resize_disk 8_exit_shell 9_create_template 10_clean
