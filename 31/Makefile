@@ -23,8 +23,15 @@ all: 0_install_tools 1_prepare_dir 2_download_image 3_customize_image 4_create_v
 	test -f template/$(IMAGE_NAME) || (cd template && wget $(IMAGE_URL))
 
 # Step 3: Add QEMU guest agent to the image
+# Step 3: Add QEMU guest agent to the image and customize with unique MAC
 3_customize_image:
-	test -f template/$(IMAGE_NAME) && cd template && virt-customize --add $(IMAGE_NAME) --install qemu-guest-agent
+	test -f template/$(IMAGE_NAME) && \
+	cd template && \
+	virt-customize --add $(IMAGE_NAME) \
+		--install qemu-guest-agent \
+		--run-command 'systemd-machine-id-setup' \
+		--run-command 'truncate -s 0 /etc/machine-id && echo "generate unique machine-id on boot" > /etc/machine-id' \
+		--run-command 'rm -f /var/lib/dbus/machine-id && ln -s /etc/machine-id /var/lib/dbus/machine-id'
 
 # Step 4: Create a new Proxmox VM
 4_create_vm:
