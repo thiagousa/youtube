@@ -31,7 +31,9 @@ git clone git@github.com:thiagousa/youtube.git
 cd 32
 ```
 
-2. Configure your variables in `terraform/terraform.tfvars`:
+2. Create a VM Template with Proxmox Cloud-Init in No Time! :
+[![alt text](https://thiagodsantos.com/wp-content/uploads/2024/12/proxmox-template.png)](https://youtu.be/50SV_eXtj34?si=f0P9d7smIRpwyRfs)
+3. Configure your variables in `terraform/terraform.tfvars`:
 ```hcl
 ## Configuration Variables
 
@@ -52,7 +54,7 @@ user: Cloud-init username
 ssh_key: SSH public key for VM access
 ```
 
-3. Initialize and apply the configuration:
+4. Initialize and apply the configuration:
 ```bash
 make all
 make init
