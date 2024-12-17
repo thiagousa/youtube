@@ -27,8 +27,8 @@ This project uses Terraform to manage infrastructure as code. It provides an aut
 
 1. Clone the repository:
 ```bash
-git clone <repository-url>
-cd <project-directory>
+git clone git@github.com:thiagousa/youtube.git
+cd 32
 ```
 
 2. Configure your variables in `terraform/terraform.tfvars`:
