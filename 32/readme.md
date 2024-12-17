@@ -54,6 +54,7 @@ ssh_key: SSH public key for VM access
 
 3. Initialize and apply the configuration:
 ```bash
+make all
 make init
 make plan
 make apply
