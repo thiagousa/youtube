@@ -1,0 +1,24 @@
+# PROXMOX
+
+pm_api_url          = "https://PROXMOX-IP/api2/json"
+pm_api_token_id     = ""
+pm_api_token_secret = ""
+target_node         = "pve"
+
+# VM
+
+vm_name        = "terraform-test-vm"
+vm_description = "A test for using terraform and cloudinit"
+template       = ""
+local_storage  = ""
+cores          = 4
+sockets         = 1
+memory         = 4048
+disk_size      = 32
+
+# NETWORK
+network_bridge = "vmbr0"
+
+user = "tsantos"
+
+ssh_key = ""
