@@ -8,8 +8,7 @@ This project uses Terraform to manage infrastructure as code. It provides an aut
 
 - Docker
 - Make
-- Terraform >= 1.0.0 (if running locally)
-- Access to target cloud provider/platform
+- Access to PROXMOX
 
 ## Project Structure
 
