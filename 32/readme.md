@@ -36,7 +36,10 @@ cd 32
 ## Configuration Variables
 
 The following variables need to be configured in your terraform.tfvars file:
-
+pm_api_url: Proxmox API URL
+pm_api_token_id: Proxmox API Token ID
+pm_api_token_secret: Proxmox API Token Secret
+target_node: Target Proxmox node
 vm_name: Name of the virtual machine
 target_node: Target Proxmox node
 template: Name of the cloud-init template to clone
