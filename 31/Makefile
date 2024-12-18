@@ -51,7 +51,7 @@ all: 0_install_tools 1_prepare_dir 2_download_image 3_customize_image 4_create_v
 
 # Step 7: Resize the VM disk
 7_resize_disk:
-	qm disk resize $(VM_ID) scsi0 +$(DISK_SIZE)
+	#qm disk resize $(VM_ID) scsi0 +$(DISK_SIZE)
 
 # Step 8: Convert VM to a template
 8_create_template:
