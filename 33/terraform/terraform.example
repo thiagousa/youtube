@@ -1,0 +1,41 @@
+# PROXMOX
+
+pm_api_url          = "https://PROXMOX-IP:8006/api2/json"
+pm_api_token_id     = ""
+pm_api_token_secret = ""
+target_node         = "pve"
+
+# NETWORK
+network_bridge = "vmbr0"
+
+user = "tsantos"
+
+ssh_key = ""
+
+# VM Configurations Array
+vm_configs = [
+  {
+    name        = "prod-vm"
+    vmid        = 201        # Added vmid
+    disk_size   = 32
+    cores       = 4
+    memory      = 4048
+    description = "Production VM"
+  },
+  {
+    name        = "dev-vm"
+    vmid        = 202        # Added vmid
+    disk_size   = 40
+    cores       = 2
+    memory      = 2048
+    description = "Development VM"
+  },
+  {
+    name        = "test-vm"
+    vmid        = 203        # Added vmid
+    disk_size   = 20
+    cores       = 1
+    memory      = 1024
+    description = "Testing VM"
+  }
+]
