@@ -1,0 +1,9 @@
+deployment:
+  replicas: 10
+image:
+  repository: nginx
+  tag: stable
+service:
+  type: ClusterIP
+  port: 80
+  targetPort: 80

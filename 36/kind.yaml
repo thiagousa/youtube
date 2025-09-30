@@ -1,0 +1,41 @@
+kind: Cluster
+apiVersion: kind.x-k8s.io/v1alpha4
+name: kind-lab
+
+nodes:
+  - role: control-plane
+    kubeadmConfigPatches:
+      - |
+        kind: ClusterConfiguration
+        apiServer:
+          extraArgs:
+            service-account-issuer: kubernetes.default.svc
+        controllerManager:
+          extraArgs:
+            bind-address: 0.0.0.0            # expose :10257 to the cluster
+        scheduler:
+          extraArgs:
+            bind-address: 0.0.0.0            # expose :10259 to the cluster
+        etcd:
+          local:
+            extraArgs:
+              listen-metrics-urls: http://0.0.0.0:2381  # expose etcd metrics
+    extraPortMappings:
+      - containerPort: 80
+        hostPort: 80
+        listenAddress: "127.0.0.1"
+        protocol: TCP
+      - containerPort: 443
+        hostPort: 443
+        listenAddress: "127.0.0.1"
+        protocol: TCP
+  - role: worker
+  - role: worker
+  - role: worker
+
+# Tell kube-proxy to expose its metrics on all interfaces
+kubeadmConfigPatches:
+  - |
+    apiVersion: kubeproxy.config.k8s.io/v1alpha1
+    kind: KubeProxyConfiguration
+    metricsBindAddress: 0.0.0.0:10249

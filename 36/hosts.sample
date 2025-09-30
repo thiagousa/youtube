@@ -1,0 +1,9 @@
+# Add these lines to /etc/hosts (see: `make hosts`)
+127.0.0.1 nginx.local.test
+127.0.0.1 grafana.local.test
+127.0.0.1 prometheus.local.test
+127.0.0.1 alertmanager.local.test
+127.0.0.1 argo.local.test
+127.0.0.1 litmus.local.test
+127.0.0.1 node-exporter.local.test
+127.0.0.1 kube-state-metrics.local.test

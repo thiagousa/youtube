@@ -1,0 +1,3 @@
+adminConfig:
+  ADMIN_USERNAME: "mycustomadmin"
+  ADMIN_PASSWORD: "mysecretpassword"
